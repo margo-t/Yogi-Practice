@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D868B5D1F7BF30600EB0E48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B5C1F7BF30600EB0E48 /* AppDelegate.swift */; };
+		8D868B5F1F7BF30600EB0E48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B5E1F7BF30600EB0E48 /* ViewController.swift */; };
+		8D868B621F7BF30600EB0E48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D868B601F7BF30600EB0E48 /* Main.storyboard */; };
+		8D868B651F7BF30600EB0E48 /* Yogi_Practice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B631F7BF30600EB0E48 /* Yogi_Practice.xcdatamodeld */; };
+		8D868B671F7BF30600EB0E48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D868B661F7BF30600EB0E48 /* Assets.xcassets */; };
+		8D868B6A1F7BF30600EB0E48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D868B681F7BF30600EB0E48 /* LaunchScreen.storyboard */; };
+		8D868B751F7BF30600EB0E48 /* Yogi_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B741F7BF30600EB0E48 /* Yogi_PracticeTests.swift */; };
+		8D868B801F7BF30600EB0E48 /* Yogi_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B7F1F7BF30600EB0E48 /* Yogi_PracticeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D868B711F7BF30600EB0E48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D868B511F7BF30600EB0E48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D868B581F7BF30600EB0E48;
+			remoteInfo = "Yogi Practice";
+		};
+		8D868B7C1F7BF30600EB0E48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D868B511F7BF30600EB0E48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D868B581F7BF30600EB0E48;
+			remoteInfo = "Yogi Practice";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8D868B591F7BF30600EB0E48 /* Yogi Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yogi Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D868B5C1F7BF30600EB0E48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8D868B5E1F7BF30600EB0E48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D868B611F7BF30600EB0E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8D868B641F7BF30600EB0E48 /* Yogi_Practice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Yogi_Practice.xcdatamodel; sourceTree = "<group>"; };
+		8D868B661F7BF30600EB0E48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D868B691F7BF30600EB0E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D868B6B1F7BF30600EB0E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D868B701F7BF30600EB0E48 /* Yogi PracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yogi PracticeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D868B741F7BF30600EB0E48 /* Yogi_PracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yogi_PracticeTests.swift; sourceTree = "<group>"; };
+		8D868B761F7BF30600EB0E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D868B7B1F7BF30600EB0E48 /* Yogi PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yogi PracticeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D868B7F1F7BF30600EB0E48 /* Yogi_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yogi_PracticeUITests.swift; sourceTree = "<group>"; };
+		8D868B811F7BF30600EB0E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D868B561F7BF30600EB0E48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D868B6D1F7BF30600EB0E48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D868B781F7BF30600EB0E48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D868B501F7BF30600EB0E48 = {
+			isa = PBXGroup;
+			children = (
+				8D868B5B1F7BF30600EB0E48 /* Yogi Practice */,
+				8D868B731F7BF30600EB0E48 /* Yogi PracticeTests */,
+				8D868B7E1F7BF30600EB0E48 /* Yogi PracticeUITests */,
+				8D868B5A1F7BF30600EB0E48 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8D868B5A1F7BF30600EB0E48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D868B591F7BF30600EB0E48 /* Yogi Practice.app */,
+				8D868B701F7BF30600EB0E48 /* Yogi PracticeTests.xctest */,
+				8D868B7B1F7BF30600EB0E48 /* Yogi PracticeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D868B5B1F7BF30600EB0E48 /* Yogi Practice */ = {
+			isa = PBXGroup;
+			children = (
+				8D868B5C1F7BF30600EB0E48 /* AppDelegate.swift */,
+				8D868B5E1F7BF30600EB0E48 /* ViewController.swift */,
+				8D868B601F7BF30600EB0E48 /* Main.storyboard */,
+				8D868B661F7BF30600EB0E48 /* Assets.xcassets */,
+				8D868B681F7BF30600EB0E48 /* LaunchScreen.storyboard */,
+				8D868B6B1F7BF30600EB0E48 /* Info.plist */,
+				8D868B631F7BF30600EB0E48 /* Yogi_Practice.xcdatamodeld */,
+			);
+			path = "Yogi Practice";
+			sourceTree = "<group>";
+		};
+		8D868B731F7BF30600EB0E48 /* Yogi PracticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D868B741F7BF30600EB0E48 /* Yogi_PracticeTests.swift */,
+				8D868B761F7BF30600EB0E48 /* Info.plist */,
+			);
+			path = "Yogi PracticeTests";
+			sourceTree = "<group>";
+		};
+		8D868B7E1F7BF30600EB0E48 /* Yogi PracticeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8D868B7F1F7BF30600EB0E48 /* Yogi_PracticeUITests.swift */,
+				8D868B811F7BF30600EB0E48 /* Info.plist */,
+			);
+			path = "Yogi PracticeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D868B581F7BF30600EB0E48 /* Yogi Practice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D868B841F7BF30600EB0E48 /* Build configuration list for PBXNativeTarget "Yogi Practice" */;
+			buildPhases = (
+				8D868B551F7BF30600EB0E48 /* Sources */,
+				8D868B561F7BF30600EB0E48 /* Frameworks */,
+				8D868B571F7BF30600EB0E48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Yogi Practice";
+			productName = "Yogi Practice";
+			productReference = 8D868B591F7BF30600EB0E48 /* Yogi Practice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8D868B6F1F7BF30600EB0E48 /* Yogi PracticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D868B871F7BF30600EB0E48 /* Build configuration list for PBXNativeTarget "Yogi PracticeTests" */;
+			buildPhases = (
+				8D868B6C1F7BF30600EB0E48 /* Sources */,
+				8D868B6D1F7BF30600EB0E48 /* Frameworks */,
+				8D868B6E1F7BF30600EB0E48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D868B721F7BF30600EB0E48 /* PBXTargetDependency */,
+			);
+			name = "Yogi PracticeTests";
+			productName = "Yogi PracticeTests";
+			productReference = 8D868B701F7BF30600EB0E48 /* Yogi PracticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8D868B7A1F7BF30600EB0E48 /* Yogi PracticeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D868B8A1F7BF30600EB0E48 /* Build configuration list for PBXNativeTarget "Yogi PracticeUITests" */;
+			buildPhases = (
+				8D868B771F7BF30600EB0E48 /* Sources */,
+				8D868B781F7BF30600EB0E48 /* Frameworks */,
+				8D868B791F7BF30600EB0E48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D868B7D1F7BF30600EB0E48 /* PBXTargetDependency */,
+			);
+			name = "Yogi PracticeUITests";
+			productName = "Yogi PracticeUITests";
+			productReference = 8D868B7B1F7BF30600EB0E48 /* Yogi PracticeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D868B511F7BF30600EB0E48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = foxberryfields;
+				TargetAttributes = {
+					8D868B581F7BF30600EB0E48 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					8D868B6F1F7BF30600EB0E48 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8D868B581F7BF30600EB0E48;
+					};
+					8D868B7A1F7BF30600EB0E48 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8D868B581F7BF30600EB0E48;
+					};
+				};
+			};
+			buildConfigurationList = 8D868B541F7BF30600EB0E48 /* Build configuration list for PBXProject "Yogi Practice" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8D868B501F7BF30600EB0E48;
+			productRefGroup = 8D868B5A1F7BF30600EB0E48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D868B581F7BF30600EB0E48 /* Yogi Practice */,
+				8D868B6F1F7BF30600EB0E48 /* Yogi PracticeTests */,
+				8D868B7A1F7BF30600EB0E48 /* Yogi PracticeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D868B571F7BF30600EB0E48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D868B6A1F7BF30600EB0E48 /* LaunchScreen.storyboard in Resources */,
+				8D868B671F7BF30600EB0E48 /* Assets.xcassets in Resources */,
+				8D868B621F7BF30600EB0E48 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D868B6E1F7BF30600EB0E48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D868B791F7BF30600EB0E48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D868B551F7BF30600EB0E48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D868B651F7BF30600EB0E48 /* Yogi_Practice.xcdatamodeld in Sources */,
+				8D868B5F1F7BF30600EB0E48 /* ViewController.swift in Sources */,
+				8D868B5D1F7BF30600EB0E48 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D868B6C1F7BF30600EB0E48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D868B751F7BF30600EB0E48 /* Yogi_PracticeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D868B771F7BF30600EB0E48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D868B801F7BF30600EB0E48 /* Yogi_PracticeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D868B721F7BF30600EB0E48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D868B581F7BF30600EB0E48 /* Yogi Practice */;
+			targetProxy = 8D868B711F7BF30600EB0E48 /* PBXContainerItemProxy */;
+		};
+		8D868B7D1F7BF30600EB0E48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D868B581F7BF30600EB0E48 /* Yogi Practice */;
+			targetProxy = 8D868B7C1F7BF30600EB0E48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8D868B601F7BF30600EB0E48 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D868B611F7BF30600EB0E48 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8D868B681F7BF30600EB0E48 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D868B691F7BF30600EB0E48 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8D868B821F7BF30600EB0E48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8D868B831F7BF30600EB0E48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D868B851F7BF30600EB0E48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4HN6T9DZP9;
+				INFOPLIST_FILE = "Yogi Practice/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "foxberryfields.Yogi-Practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D868B861F7BF30600EB0E48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4HN6T9DZP9;
+				INFOPLIST_FILE = "Yogi Practice/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "foxberryfields.Yogi-Practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8D868B881F7BF30600EB0E48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4HN6T9DZP9;
+				INFOPLIST_FILE = "Yogi PracticeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "foxberryfields.Yogi-PracticeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yogi Practice.app/Yogi Practice";
+			};
+			name = Debug;
+		};
+		8D868B891F7BF30600EB0E48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4HN6T9DZP9;
+				INFOPLIST_FILE = "Yogi PracticeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "foxberryfields.Yogi-PracticeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yogi Practice.app/Yogi Practice";
+			};
+			name = Release;
+		};
+		8D868B8B1F7BF30600EB0E48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4HN6T9DZP9;
+				INFOPLIST_FILE = "Yogi PracticeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "foxberryfields.Yogi-PracticeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Yogi Practice";
+			};
+			name = Debug;
+		};
+		8D868B8C1F7BF30600EB0E48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4HN6T9DZP9;
+				INFOPLIST_FILE = "Yogi PracticeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "foxberryfields.Yogi-PracticeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Yogi Practice";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D868B541F7BF30600EB0E48 /* Build configuration list for PBXProject "Yogi Practice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D868B821F7BF30600EB0E48 /* Debug */,
+				8D868B831F7BF30600EB0E48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D868B841F7BF30600EB0E48 /* Build configuration list for PBXNativeTarget "Yogi Practice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D868B851F7BF30600EB0E48 /* Debug */,
+				8D868B861F7BF30600EB0E48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D868B871F7BF30600EB0E48 /* Build configuration list for PBXNativeTarget "Yogi PracticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D868B881F7BF30600EB0E48 /* Debug */,
+				8D868B891F7BF30600EB0E48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D868B8A1F7BF30600EB0E48 /* Build configuration list for PBXNativeTarget "Yogi PracticeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D868B8B1F7BF30600EB0E48 /* Debug */,
+				8D868B8C1F7BF30600EB0E48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8D868B631F7BF30600EB0E48 /* Yogi_Practice.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8D868B641F7BF30600EB0E48 /* Yogi_Practice.xcdatamodel */,
+			);
+			currentVersion = 8D868B641F7BF30600EB0E48 /* Yogi_Practice.xcdatamodel */;
+			path = Yogi_Practice.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8D868B511F7BF30600EB0E48 /* Project object */;
+}

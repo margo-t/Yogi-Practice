@@ -16,6 +16,10 @@
 		8D868B751F7BF30600EB0E48 /* Yogi_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B741F7BF30600EB0E48 /* Yogi_PracticeTests.swift */; };
 		8D868B801F7BF30600EB0E48 /* Yogi_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B7F1F7BF30600EB0E48 /* Yogi_PracticeUITests.swift */; };
 		8D868B8E1F7BF35B00EB0E48 /* MeditationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B8D1F7BF35B00EB0E48 /* MeditationVC.swift */; };
+		8D868B911F7C3D1100EB0E48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D868B8F1F7C14A300EB0E48 /* GoogleService-Info.plist */; };
+		CB8401D30CB320D5A5456178 /* Pods_Yogi_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752237452526ED2708E673E6 /* Pods_Yogi_Practice.framework */; };
+		EEF24808D2676C8A65A4E166 /* Pods_Yogi_PracticeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F27000D8FB45DDCD602A06 /* Pods_Yogi_PracticeUITests.framework */; };
+		F3B9F54B37BEE80CCAB812B4 /* Pods_Yogi_PracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246FDCD90F52C05CE05F7E7F /* Pods_Yogi_PracticeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		246FDCD90F52C05CE05F7E7F /* Pods_Yogi_PracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yogi_PracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		278F5B9AFCCAC7BCB890E7AE /* Pods-Yogi PracticeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yogi PracticeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yogi PracticeTests/Pods-Yogi PracticeTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C134CEF1FD956ECECD5D735 /* Pods-Yogi Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yogi Practice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yogi Practice/Pods-Yogi Practice.debug.xcconfig"; sourceTree = "<group>"; };
+		6A83A909347A5B43BF0630F4 /* Pods-Yogi PracticeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yogi PracticeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yogi PracticeUITests/Pods-Yogi PracticeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		752237452526ED2708E673E6 /* Pods_Yogi_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yogi_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		756058C303E140752D1E3BDD /* Pods-Yogi PracticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yogi PracticeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yogi PracticeTests/Pods-Yogi PracticeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D868B591F7BF30600EB0E48 /* Yogi Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yogi Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D868B5C1F7BF30600EB0E48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D868B5E1F7BF30600EB0E48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +61,10 @@
 		8D868B7F1F7BF30600EB0E48 /* Yogi_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yogi_PracticeUITests.swift; sourceTree = "<group>"; };
 		8D868B811F7BF30600EB0E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D868B8D1F7BF35B00EB0E48 /* MeditationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationVC.swift; sourceTree = "<group>"; };
+		8D868B8F1F7C14A300EB0E48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9415B6F32CFA175502F2F603 /* Pods-Yogi PracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yogi PracticeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yogi PracticeUITests/Pods-Yogi PracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADDF61A5286BBA84EBADB8EE /* Pods-Yogi Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yogi Practice.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yogi Practice/Pods-Yogi Practice.release.xcconfig"; sourceTree = "<group>"; };
+		C9F27000D8FB45DDCD602A06 /* Pods_Yogi_PracticeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yogi_PracticeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8401D30CB320D5A5456178 /* Pods_Yogi_Practice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B9F54B37BEE80CCAB812B4 /* Pods_Yogi_PracticeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +88,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEF24808D2676C8A65A4E166 /* Pods_Yogi_PracticeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2666899D163BCC2D4A956448 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C134CEF1FD956ECECD5D735 /* Pods-Yogi Practice.debug.xcconfig */,
+				ADDF61A5286BBA84EBADB8EE /* Pods-Yogi Practice.release.xcconfig */,
+				756058C303E140752D1E3BDD /* Pods-Yogi PracticeTests.debug.xcconfig */,
+				278F5B9AFCCAC7BCB890E7AE /* Pods-Yogi PracticeTests.release.xcconfig */,
+				9415B6F32CFA175502F2F603 /* Pods-Yogi PracticeUITests.debug.xcconfig */,
+				6A83A909347A5B43BF0630F4 /* Pods-Yogi PracticeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8D868B501F7BF30600EB0E48 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +115,8 @@
 				8D868B731F7BF30600EB0E48 /* Yogi PracticeTests */,
 				8D868B7E1F7BF30600EB0E48 /* Yogi PracticeUITests */,
 				8D868B5A1F7BF30600EB0E48 /* Products */,
+				2666899D163BCC2D4A956448 /* Pods */,
+				A08470DE351082DD07AAA5E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +139,7 @@
 				8D868B601F7BF30600EB0E48 /* Main.storyboard */,
 				8D868B661F7BF30600EB0E48 /* Assets.xcassets */,
 				8D868B681F7BF30600EB0E48 /* LaunchScreen.storyboard */,
+				8D868B8F1F7C14A300EB0E48 /* GoogleService-Info.plist */,
 				8D868B6B1F7BF30600EB0E48 /* Info.plist */,
 				8D868B631F7BF30600EB0E48 /* Yogi_Practice.xcdatamodeld */,
 			);
@@ -131,6 +164,16 @@
 			path = "Yogi PracticeUITests";
 			sourceTree = "<group>";
 		};
+		A08470DE351082DD07AAA5E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				752237452526ED2708E673E6 /* Pods_Yogi_Practice.framework */,
+				246FDCD90F52C05CE05F7E7F /* Pods_Yogi_PracticeTests.framework */,
+				C9F27000D8FB45DDCD602A06 /* Pods_Yogi_PracticeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D868B841F7BF30600EB0E48 /* Build configuration list for PBXNativeTarget "Yogi Practice" */;
 			buildPhases = (
+				177FFD4BD20DB64C0E8DAF44 /* [CP] Check Pods Manifest.lock */,
 				8D868B551F7BF30600EB0E48 /* Sources */,
 				8D868B561F7BF30600EB0E48 /* Frameworks */,
 				8D868B571F7BF30600EB0E48 /* Resources */,
+				F292A53E78AE7B5BB2C3D568 /* [CP] Embed Pods Frameworks */,
+				06BFAED5ACBA2E01E4DB6B2A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D868B871F7BF30600EB0E48 /* Build configuration list for PBXNativeTarget "Yogi PracticeTests" */;
 			buildPhases = (
+				B7A6AC2215D735F1BC0F0297 /* [CP] Check Pods Manifest.lock */,
 				8D868B6C1F7BF30600EB0E48 /* Sources */,
 				8D868B6D1F7BF30600EB0E48 /* Frameworks */,
 				8D868B6E1F7BF30600EB0E48 /* Resources */,
+				C067CA558D8B6FA802328408 /* [CP] Embed Pods Frameworks */,
+				6F49EF857BD348FBF7AC2B6F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D868B8A1F7BF30600EB0E48 /* Build configuration list for PBXNativeTarget "Yogi PracticeUITests" */;
 			buildPhases = (
+				BC888F830E87E83BB62893AB /* [CP] Check Pods Manifest.lock */,
 				8D868B771F7BF30600EB0E48 /* Sources */,
 				8D868B781F7BF30600EB0E48 /* Frameworks */,
 				8D868B791F7BF30600EB0E48 /* Resources */,
+				64F2B1B6D7DBCCCC19E71F25 /* [CP] Embed Pods Frameworks */,
+				7D0F399DFF97F80DEB5E6ECA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D868B6A1F7BF30600EB0E48 /* LaunchScreen.storyboard in Resources */,
+				8D868B911F7C3D1100EB0E48 /* GoogleService-Info.plist in Resources */,
 				8D868B671F7BF30600EB0E48 /* Assets.xcassets in Resources */,
 				8D868B621F7BF30600EB0E48 /* Main.storyboard in Resources */,
 			);
@@ -259,6 +312,158 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06BFAED5ACBA2E01E4DB6B2A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yogi Practice/Pods-Yogi Practice-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		177FFD4BD20DB64C0E8DAF44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yogi Practice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64F2B1B6D7DBCCCC19E71F25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yogi PracticeUITests/Pods-Yogi PracticeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F49EF857BD348FBF7AC2B6F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yogi PracticeTests/Pods-Yogi PracticeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D0F399DFF97F80DEB5E6ECA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yogi PracticeUITests/Pods-Yogi PracticeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7A6AC2215D735F1BC0F0297 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yogi PracticeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC888F830E87E83BB62893AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yogi PracticeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C067CA558D8B6FA802328408 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yogi PracticeTests/Pods-Yogi PracticeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F292A53E78AE7B5BB2C3D568 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Yogi Practice/Pods-Yogi Practice-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yogi Practice/Pods-Yogi Practice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D868B551F7BF30600EB0E48 /* Sources */ = {
@@ -432,6 +637,7 @@
 		};
 		8D868B851F7BF30600EB0E48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C134CEF1FD956ECECD5D735 /* Pods-Yogi Practice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +653,7 @@
 		};
 		8D868B861F7BF30600EB0E48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADDF61A5286BBA84EBADB8EE /* Pods-Yogi Practice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,6 +669,7 @@
 		};
 		8D868B881F7BF30600EB0E48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 756058C303E140752D1E3BDD /* Pods-Yogi PracticeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -479,6 +687,7 @@
 		};
 		8D868B891F7BF30600EB0E48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 278F5B9AFCCAC7BCB890E7AE /* Pods-Yogi PracticeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -496,6 +705,7 @@
 		};
 		8D868B8B1F7BF30600EB0E48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9415B6F32CFA175502F2F603 /* Pods-Yogi PracticeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -512,6 +722,7 @@
 		};
 		8D868B8C1F7BF30600EB0E48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A83A909347A5B43BF0630F4 /* Pods-Yogi PracticeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase;
+import GoogleSignIn;
 
 class MeditationVC: UIViewController {
     
@@ -25,13 +27,13 @@ class MeditationVC: UIViewController {
     @IBOutlet weak var FinishButtonOutlet: UIButton!
     
     
-    
     @IBAction func playButton(_ sender: UIButton) {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MeditationVC.counter), userInfo: nil, repeats: true)
         timerSliderOutlet.isHidden = true
         PlayButtonOutlet.isHidden = true
         PauseButtonOutlet.isHidden = false
+        FinishButtonOutlet.isHidden = true
         
         
         
@@ -48,6 +50,32 @@ class MeditationVC: UIViewController {
     
     @IBAction func finishButton(_ sender: UIButton) {
         TotalMeditationTime += CurrentMeditationTime
+        let date = Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day], from: date)
+        let today = String(components.day!)+"-"+String(components.month!)+"-"+String(components.year!)
+        print(today)
+        
+        
+        //Update Firebase
+        if CurrentMeditationTime > 0 {
+            print("passed true for CurrentMeditationTime > 0")
+            FinishButtonOutlet.isEnabled = false
+            DataService.instance.updateMeditationTime(withTime: CurrentMeditationTime, andTotalTime: TotalMeditationTime,
+                                                      forUid: (Auth.auth().currentUser?.uid)!, forDay: today, sendComplete: {(isComplete) in
+                                                        if isComplete {
+                                                            self.FinishButtonOutlet.isEnabled = true
+                                                            print("sent to Firebase")
+                                                            
+                                                        }
+                                                        else {
+                                                            self.FinishButtonOutlet.isEnabled = true
+                                                            print("Error sending")
+                                                        }
+            })
+        }
+        
+        //Update UI
         totalTime.text = formatTime(time: Int(TotalMeditationTime/60))+":"+formatTime(time: TotalMeditationTime%60)
         FinishButtonOutlet.isHidden = true
         PlayButtonOutlet.isHidden = false
@@ -55,8 +83,9 @@ class MeditationVC: UIViewController {
         counterMinutes = 1800
         CurrentMeditationTime = 0
         timerSliderOutlet.setValue(1800, animated: true)
-        //PlayButtonOutlet.textInputMode = "Start Again"
         timerLabel.text = "30:00"
+        
+        
         
         
         
@@ -80,6 +109,7 @@ class MeditationVC: UIViewController {
             
             PauseButtonOutlet.isHidden = true
             FinishButtonOutlet.isHidden = false
+            PlayButtonOutlet.isHidden = true
             
         }
         

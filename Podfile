@@ -7,7 +7,6 @@ target 'Yogi Practice' do
 
   # Pods for Yogi Practice
   pod 'Firebase/Core'
-  pod 'Firebase'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'GoogleSignIn'

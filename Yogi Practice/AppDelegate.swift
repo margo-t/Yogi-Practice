@@ -19,11 +19,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        FirebaseApp.configure()
         
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
+        FirebaseApp.configure()
+        print("got to a gelegate")
+        
+        if Auth.auth().currentUser == nil {
+            print("is nil user")
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+            window?.makeKeyAndVisible()
+            window?.rootViewController?.present(loginVC, animated: true, completion: nil)
+            
+        }
+        
+        
+        //TODO: google sign-in set up
+        
+//        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+//        print("REQUEST TOKEN")
+//        print(FirebaseApp.app()?.options.clientID ?? "Client ID expected")
+//        GIDSignIn.sharedInstance().delegate = self
+        
+        
         
         return true
     
@@ -34,23 +51,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         -> Bool {
             return GIDSignIn.sharedInstance().handle(url,
                                                      sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
-                                                     annotation: [:])
+                                                     annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+            
     }
 
-//    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-//
-//    }
-//
-//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-//
-//    }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        // ...
+        
+        // error handling
         if let error = error {
             print(error.localizedDescription)
             return
         }
+        
+        print("signed in to FB")
         
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
@@ -62,12 +76,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 return
             }
             // User is signed in
-            print("user signed in")
-            self.handleLogin()
+            print("user authenticated")
+            print(user?.uid ?? "user uid")
+            //self.handleLogin()
         }
     }
     
     func handleLogin() {
+        print("Logging in from App delegate")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let meditationVController: MeditationVC = (storyboard.instantiateViewController(withIdentifier: "MeditationVC") as? MeditationVC)!
         
@@ -83,6 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         // Perform any operations when the user disconnects from app here.
         // ...
+        //GIDSignIn.sharedInstance().signOut()
     }
 
 

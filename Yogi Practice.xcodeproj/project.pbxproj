@@ -12,6 +12,7 @@
 		8D3CFAC01F7C5B9600220A9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D3CFABF1F7C5B7100220A9C /* GoogleService-Info.plist */; };
 		8D3CFAC31F7C649100220A9C /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CFAC21F7C649100220A9C /* SignUpVC.swift */; };
 		8D3CFACA1F7C922100220A9C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CFAC91F7C922100220A9C /* LoginVC.swift */; };
+		8D74C2321F7DA8EB001FDB82 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D74C2311F7DA8EB001FDB82 /* DataService.swift */; };
 		8D868B5D1F7BF30600EB0E48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B5C1F7BF30600EB0E48 /* AppDelegate.swift */; };
 		8D868B621F7BF30600EB0E48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D868B601F7BF30600EB0E48 /* Main.storyboard */; };
 		8D868B651F7BF30600EB0E48 /* Yogi_Practice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B631F7BF30600EB0E48 /* Yogi_Practice.xcdatamodeld */; };
@@ -20,6 +21,9 @@
 		8D868B751F7BF30600EB0E48 /* Yogi_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B741F7BF30600EB0E48 /* Yogi_PracticeTests.swift */; };
 		8D868B801F7BF30600EB0E48 /* Yogi_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B7F1F7BF30600EB0E48 /* Yogi_PracticeUITests.swift */; };
 		8D868B8E1F7BF35B00EB0E48 /* MeditationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B8D1F7BF35B00EB0E48 /* MeditationVC.swift */; };
+		8DBFEF001F7DEB4F009FF52F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFEEFF1F7DEB4F009FF52F /* AuthService.swift */; };
+		8DBFEF021F7EB985009FF52F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFEF011F7EB985009FF52F /* HomeVC.swift */; };
+		8DBFEF061F7EBA54009FF52F /* PranayamaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFEF051F7EBA54009FF52F /* PranayamaVC.swift */; };
 		CB8401D30CB320D5A5456178 /* Pods_Yogi_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752237452526ED2708E673E6 /* Pods_Yogi_Practice.framework */; };
 		EEF24808D2676C8A65A4E166 /* Pods_Yogi_PracticeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F27000D8FB45DDCD602A06 /* Pods_Yogi_PracticeUITests.framework */; };
 		F3B9F54B37BEE80CCAB812B4 /* Pods_Yogi_PracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246FDCD90F52C05CE05F7E7F /* Pods_Yogi_PracticeTests.framework */; };
@@ -53,9 +57,10 @@
 		8D3CFABD1F7C595A00220A9C /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		8D3CFABF1F7C5B7100220A9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D3CFAC21F7C649100220A9C /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		8D3CFAC41F7C7F5400220A9C /* Yogi Practice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Yogi Practice.entitlements"; sourceTree = "<group>"; };
 		8D3CFAC51F7C7FDF00220A9C /* Yogi Practice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yogi Practice-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D3CFAC91F7C922100220A9C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		8D3CFACB1F7D5BAE00220A9C /* Yogi Practice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Yogi Practice.entitlements"; sourceTree = "<group>"; };
+		8D74C2311F7DA8EB001FDB82 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		8D868B591F7BF30600EB0E48 /* Yogi Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yogi Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D868B5C1F7BF30600EB0E48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D868B611F7BF30600EB0E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,6 +75,9 @@
 		8D868B7F1F7BF30600EB0E48 /* Yogi_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yogi_PracticeUITests.swift; sourceTree = "<group>"; };
 		8D868B811F7BF30600EB0E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D868B8D1F7BF35B00EB0E48 /* MeditationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationVC.swift; sourceTree = "<group>"; };
+		8DBFEEFF1F7DEB4F009FF52F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		8DBFEF011F7EB985009FF52F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8DBFEF051F7EBA54009FF52F /* PranayamaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PranayamaVC.swift; sourceTree = "<group>"; };
 		9415B6F32CFA175502F2F603 /* Pods-Yogi PracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yogi PracticeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yogi PracticeUITests/Pods-Yogi PracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADDF61A5286BBA84EBADB8EE /* Pods-Yogi Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yogi Practice.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yogi Practice/Pods-Yogi Practice.release.xcconfig"; sourceTree = "<group>"; };
 		C9F27000D8FB45DDCD602A06 /* Pods_Yogi_PracticeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yogi_PracticeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,14 +133,41 @@
 			path = IBDesignable;
 			sourceTree = "<group>";
 		};
-		8D3CFAC11F7C643F00220A9C /* VCs */ = {
+		8D3CFAC11F7C643F00220A9C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8D868B8D1F7BF35B00EB0E48 /* MeditationVC.swift */,
-				8D3CFAC21F7C649100220A9C /* SignUpVC.swift */,
 				8D3CFAC91F7C922100220A9C /* LoginVC.swift */,
+				8D3CFAC21F7C649100220A9C /* SignUpVC.swift */,
+				8DBFEF011F7EB985009FF52F /* HomeVC.swift */,
+				8D868B8D1F7BF35B00EB0E48 /* MeditationVC.swift */,
+				8DBFEF051F7EBA54009FF52F /* PranayamaVC.swift */,
 			);
-			path = VCs;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8D3CFACF1F7DA58C00220A9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8D3CFAD01F7DA59600220A9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D868B601F7BF30600EB0E48 /* Main.storyboard */,
+				8D868B681F7BF30600EB0E48 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8D74C22E1F7DA882001FDB82 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8D74C2311F7DA8EB001FDB82 /* DataService.swift */,
+				8DBFEEFF1F7DEB4F009FF52F /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		8D868B501F7BF30600EB0E48 = {
@@ -160,17 +195,18 @@
 		8D868B5B1F7BF30600EB0E48 /* Yogi Practice */ = {
 			isa = PBXGroup;
 			children = (
-				8D3CFAC41F7C7F5400220A9C /* Yogi Practice.entitlements */,
+				8D3CFACB1F7D5BAE00220A9C /* Yogi Practice.entitlements */,
 				8D868B5C1F7BF30600EB0E48 /* AppDelegate.swift */,
-				8D3CFAC11F7C643F00220A9C /* VCs */,
-				8D3CFABA1F7C588400220A9C /* IBDesignable */,
-				8D868B601F7BF30600EB0E48 /* Main.storyboard */,
-				8D868B661F7BF30600EB0E48 /* Assets.xcassets */,
-				8D868B681F7BF30600EB0E48 /* LaunchScreen.storyboard */,
-				8D868B6B1F7BF30600EB0E48 /* Info.plist */,
-				8D3CFABF1F7C5B7100220A9C /* GoogleService-Info.plist */,
 				8D868B631F7BF30600EB0E48 /* Yogi_Practice.xcdatamodeld */,
 				8D3CFAC51F7C7FDF00220A9C /* Yogi Practice-Bridging-Header.h */,
+				8D868B6B1F7BF30600EB0E48 /* Info.plist */,
+				8D3CFABF1F7C5B7100220A9C /* GoogleService-Info.plist */,
+				8D3CFACF1F7DA58C00220A9C /* Model */,
+				8D3CFAC11F7C643F00220A9C /* Controller */,
+				8D3CFAD01F7DA59600220A9C /* View */,
+				8D74C22E1F7DA882001FDB82 /* Services */,
+				8D3CFABA1F7C588400220A9C /* IBDesignable */,
+				8D868B661F7BF30600EB0E48 /* Assets.xcassets */,
 			);
 			path = "Yogi Practice";
 			sourceTree = "<group>";
@@ -491,6 +527,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -498,6 +535,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,12 +551,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D3CFAC31F7C649100220A9C /* SignUpVC.swift in Sources */,
+				8DBFEF021F7EB985009FF52F /* HomeVC.swift in Sources */,
+				8DBFEF061F7EBA54009FF52F /* PranayamaVC.swift in Sources */,
 				8D868B8E1F7BF35B00EB0E48 /* MeditationVC.swift in Sources */,
 				8D3CFACA1F7C922100220A9C /* LoginVC.swift in Sources */,
+				8DBFEF001F7DEB4F009FF52F /* AuthService.swift in Sources */,
 				8D868B651F7BF30600EB0E48 /* Yogi_Practice.xcdatamodeld in Sources */,
 				8D3CFABC1F7C590A00220A9C /* DesignableView.swift in Sources */,
 				8D868B5D1F7BF30600EB0E48 /* AppDelegate.swift in Sources */,
 				8D3CFABE1F7C595A00220A9C /* DesignableButton.swift in Sources */,
+				8D74C2321F7DA8EB001FDB82 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,7 +728,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "Yogi Practice/Yogi Practice.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4HN6T9DZP9;
 				INFOPLIST_FILE = "Yogi Practice/Info.plist";
@@ -706,7 +748,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "Yogi Practice/Yogi Practice.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4HN6T9DZP9;
 				INFOPLIST_FILE = "Yogi Practice/Info.plist";

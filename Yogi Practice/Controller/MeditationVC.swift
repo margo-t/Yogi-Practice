@@ -48,11 +48,11 @@ class MeditationVC: UIViewController {
                 self.mediTime = value["totalTime"] as? Int ?? 0
                 print(self.mediTime)
                 self.TotalMeditationTime = self.mediTime
-                self.totalTime.text = self.formatTime(time: Int(self.TotalMeditationTime/60))+":"+self.formatTime(time: self.TotalMeditationTime%60)
+                self.totalTime.text = String(Int(self.TotalMeditationTime/3600))+" hours, "+String(Int((self.TotalMeditationTime%3600)/60))+" mins"
             }
+                
             else {
-            
-            self.totalTime.text = self.formatTime(time: Int(self.TotalMeditationTime/60))+":"+self.formatTime(time: self.TotalMeditationTime%60)
+                self.totalTime.text = String(Int(self.TotalMeditationTime/3600))+" hours, "+String(Int((self.TotalMeditationTime%3600)/60))+" mins"
             }
     })
         
@@ -106,7 +106,8 @@ class MeditationVC: UIViewController {
         }
         
         //Update UI
-        totalTime.text = formatTime(time: Int(TotalMeditationTime/60))+":"+formatTime(time: TotalMeditationTime%60)
+        self.totalTime.text = String(Int(self.TotalMeditationTime/3600))+" hours, "+String(Int((self.TotalMeditationTime%3600)/60))+" mins"
+        
         FinishButtonOutlet.isHidden = true
         PlayButtonOutlet.isHidden = false
         timerSliderOutlet.isHidden = false
@@ -120,7 +121,9 @@ class MeditationVC: UIViewController {
     
     
     @IBAction func timerSlider(_ sender: UISlider) {
-        counterMinutes = Int(sender.value)
+        let roundedValue = round(sender.value / 60) * 60
+        sender.value = roundedValue
+        counterMinutes = Int(roundedValue)
         timerLabel.text = formatTime(time: Int(counterMinutes/60))+":"+formatTime(time: counterMinutes%60)
     }
     

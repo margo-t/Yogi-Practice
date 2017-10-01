@@ -16,6 +16,8 @@ class MeditationVC: UIViewController {
     var TotalMeditationTime = 0
     var CurrentMeditationTime = 0
     var timer = Timer()
+    var refHandle: UInt!
+    var mediTime: Int = 0
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var totalTime: UILabel!
@@ -27,6 +29,38 @@ class MeditationVC: UIViewController {
     @IBOutlet weak var FinishButtonOutlet: UIButton!
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let userID = Auth.auth().currentUser?.uid
+        let ref = Database.database().reference()
+        ref.child("users").child(userID!).child("meditation").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get time value
+            
+            if let value = snapshot.value as? NSDictionary {
+                //let value = snapshot.value as! NSDictionary
+                self.mediTime = value["totalTime"] as? Int ?? 0
+                print(self.mediTime)
+                self.TotalMeditationTime = self.mediTime
+                self.totalTime.text = self.formatTime(time: Int(self.TotalMeditationTime/60))+":"+self.formatTime(time: self.TotalMeditationTime%60)
+            }
+            else {
+            
+            self.totalTime.text = self.formatTime(time: Int(self.TotalMeditationTime/60))+":"+self.formatTime(time: self.TotalMeditationTime%60)
+            }
+    })
+        
+    }
+    
+    
+    
+    
     @IBAction func playButton(_ sender: UIButton) {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MeditationVC.counter), userInfo: nil, repeats: true)
@@ -34,9 +68,6 @@ class MeditationVC: UIViewController {
         PlayButtonOutlet.isHidden = true
         PauseButtonOutlet.isHidden = false
         FinishButtonOutlet.isHidden = true
-        
-        
-        
     }
     
     @IBAction func pauseButton(_ sender: UIButton) {
@@ -55,7 +86,6 @@ class MeditationVC: UIViewController {
         let components = calendar.dateComponents([.year, .month, .day], from: date)
         let today = String(components.day!)+"-"+String(components.month!)+"-"+String(components.year!)
         print(today)
-        
         
         //Update Firebase
         if CurrentMeditationTime > 0 {
@@ -84,11 +114,6 @@ class MeditationVC: UIViewController {
         CurrentMeditationTime = 0
         timerSliderOutlet.setValue(1800, animated: true)
         timerLabel.text = "30:00"
-        
-        
-        
-        
-        
     }
     
     
@@ -128,16 +153,9 @@ class MeditationVC: UIViewController {
     
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        totalTime.text = formatTime(time: Int(TotalMeditationTime/60))+":"+formatTime(time: TotalMeditationTime%60)
-    }
+
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
     
     
 }

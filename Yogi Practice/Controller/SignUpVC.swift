@@ -14,12 +14,6 @@ class SignUpVC: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.emailField.text = Auth.auth().currentUser?.email
-    }
-    
 
     @IBAction func closePopupBtn(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
@@ -40,9 +34,6 @@ class SignUpVC: UIViewController, GIDSignInUIDelegate {
                     if success {
                         AuthService.instance.loginUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, loginComplete: { (success, nil) in
                             self.dismiss(animated: true, completion: nil)
-//                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                            let HomeVController: HomeVC = (storyboard.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC)!
-//                            self.present(HomeVController, animated: true, completion: nil)
                             print("Successfully registered user")
                         })
                     } else {

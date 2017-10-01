@@ -36,4 +36,6 @@ class DataService {
         REF_USERS.child(forUid).child("meditation").updateChildValues(["totalTime" : totalTime])
         sendComplete(true)
     }
+    
+
 }

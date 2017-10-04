@@ -30,12 +30,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Yzl-mb-6p1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yogi Practice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vr-y3-WC1">
-                                <rect key="frame" x="50" y="52.999999999999993" width="314" height="26.333333333333321"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOu-lO-jkp" customClass="DesignableButton" customModule="Yogi_Practice" customModuleProvider="target">
                                 <rect key="frame" x="50" y="513" width="314" height="44"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.1633668664" colorSpace="calibratedRGB"/>
@@ -102,6 +96,12 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Yogi Practice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vr-y3-WC1">
+                                <rect key="frame" x="60" y="150" width="314" height="26.333333333333321"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Yzl-mb-6p1" firstAttribute="centerX" secondItem="t3D-MU-eNh" secondAttribute="centerX" id="7Ai-3A-MXD"/>
@@ -129,17 +129,17 @@
             </objects>
             <point key="canvasLocation" x="-522" y="313"/>
         </scene>
-        <!--PranayamaVC-->
+        <!--AsanaVC-->
         <scene sceneID="qEz-tU-3Lc">
             <objects>
-                <viewController storyboardIdentifier="PranayamaVC" title="PranayamaVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4kZ-c6-pat" customClass="PranayamaVC" customModule="Yogi_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PranayamaVC" title="AsanaVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4kZ-c6-pat" customClass="PranayamaVC" customModule="Yogi_Practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ank-B1-Jyc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="wk5-tk-dY9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pranayama" id="Ibu-rw-Xvw"/>
+                    <tabBarItem key="tabBarItem" title="Asana" image="asana" id="Ibu-rw-Xvw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLz-QS-Rji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,7 +165,7 @@
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="ih1-fp-Ata"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="MeA-Vv-bvg"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="MeA-Vv-bvg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9J-k0-UHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,6 +179,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.99841076135635376" green="0.73786920309066772" blue="0.00049928436055779457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="abz-g2-Uup" kind="relationship" relationship="viewControllers" id="9oJ-eZ-b2Z"/>
@@ -360,8 +362,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="6TD-1a-QuC"/>
                                 </constraints>
-                                <color key="minimumTrackTintColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="thumbTintColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="minimumTrackTintColor" red="0.99841076139999996" green="0.73786920310000004" blue="0.00049928436059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.99841076139999996" green="0.73786920310000004" blue="0.00049928436059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="timerSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="JTF-zd-87E"/>
                                 </connections>
@@ -400,7 +402,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="meditation" id="6Tj-f3-sMa"/>
+                    <tabBarItem key="tabBarItem" title="meditation" image="meditation-1" id="6Tj-f3-sMa"/>
                     <connections>
                         <outlet property="FinishButtonOutlet" destination="hNV-CQ-PU4" id="vef-3K-HeI"/>
                         <outlet property="PauseButtonOutlet" destination="pmy-qG-Lqy" id="haT-Qc-Ozt"/>
@@ -417,6 +419,10 @@
     </scenes>
     <resources>
         <image name="Play Button" width="151" height="151"/>
+        <image name="asana" width="25" height="16"/>
         <image name="background" width="4928" height="3264"/>
+        <image name="home" width="17" height="16"/>
+        <image name="meditation-1" width="25" height="23"/>
     </resources>
+    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
 </document>

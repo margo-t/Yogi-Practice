@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,10 +31,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOu-lO-jkp" customClass="DesignableButton" customModule="Yogi_Practice" customModuleProvider="target">
-                                <rect key="frame" x="50" y="513" width="314" height="44"/>
+                                <rect key="frame" x="50" y="512" width="314" height="44"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.1633668664" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="QT3-hK-6oI"/>
+                                    <constraint firstAttribute="height" constant="44" id="kOQ-8i-gWa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="by email">
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t3D-MU-eNh">
-                                <rect key="frame" x="50" y="272" width="314" height="223"/>
+                                <rect key="frame" x="50" y="442" width="314" height="52"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7t-fv-Q5B">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="0.0"/>
@@ -62,11 +62,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmh-1Z-n89" customClass="DesignableButton" customModule="Yogi_Practice" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="10" width="314" height="33"/>
+                                        <rect key="frame" x="0.0" y="10" width="314" height="32"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="33" id="5bd-W8-01K"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Sign in with Facebook">
@@ -84,40 +81,56 @@
                                             <action selector="loginFbButton:" destination="eMT-0v-h1U" eventType="touchUpInside" id="AMb-ii-1kd"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kE9-vK-ejX" customClass="GIDSignInButton">
-                                        <rect key="frame" x="0.0" y="53" width="314" height="160"/>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kE9-vK-ejX" customClass="GIDSignInButton">
+                                        <rect key="frame" x="0.0" y="47" width="314" height="0.0"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIq-iS-V6b">
-                                        <rect key="frame" x="0.0" y="223" width="314" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="52" width="314" height="0.0"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="kE9-vK-ejX" firstAttribute="top" secondItem="uIq-iS-V6b" secondAttribute="bottom" constant="-5" id="QPy-LX-aE3"/>
+                                    <constraint firstItem="dmh-1Z-n89" firstAttribute="centerY" secondItem="t3D-MU-eNh" secondAttribute="centerY" id="T9L-dr-CxU"/>
+                                    <constraint firstItem="kE9-vK-ejX" firstAttribute="top" secondItem="dmh-1Z-n89" secondAttribute="bottom" constant="5" id="rLV-Yp-HdF"/>
+                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Yogi Practice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vr-y3-WC1">
-                                <rect key="frame" x="60" y="150" width="314" height="26.333333333333321"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yogi Practice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vr-y3-WC1">
+                                <rect key="frame" x="50" y="177" width="314" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="EfU-va-U0g"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meditation" translatesAutoresizingMaskIntoConstraints="NO" id="Hp0-6T-zCt">
+                                <rect key="frame" x="87" y="39" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="y2q-Q1-eI0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Yzl-mb-6p1" firstAttribute="centerX" secondItem="t3D-MU-eNh" secondAttribute="centerX" id="7Ai-3A-MXD"/>
-                            <constraint firstItem="t3D-MU-eNh" firstAttribute="top" secondItem="UNN-qR-ICO" secondAttribute="top" constant="272" id="8GC-iy-eVq"/>
-                            <constraint firstItem="t3D-MU-eNh" firstAttribute="leading" secondItem="WRG-6n-p6a" secondAttribute="leading" constant="50" id="9pN-ir-DUf"/>
-                            <constraint firstItem="t3D-MU-eNh" firstAttribute="leading" secondItem="pOu-lO-jkp" secondAttribute="leading" id="BFU-f6-seP"/>
-                            <constraint firstItem="pOu-lO-jkp" firstAttribute="top" secondItem="t3D-MU-eNh" secondAttribute="bottom" constant="18" id="DcL-LI-9J5"/>
-                            <constraint firstItem="4vr-y3-WC1" firstAttribute="leading" secondItem="WRG-6n-p6a" secondAttribute="leading" constant="50" id="E7C-vR-v90"/>
-                            <constraint firstItem="Yzl-mb-6p1" firstAttribute="top" secondItem="UNN-qR-ICO" secondAttribute="top" id="GmD-Wb-7ET"/>
-                            <constraint firstItem="t3D-MU-eNh" firstAttribute="trailing" secondItem="pOu-lO-jkp" secondAttribute="trailing" id="H0a-xB-4bT"/>
-                            <constraint firstItem="WRG-6n-p6a" firstAttribute="bottom" secondItem="pOu-lO-jkp" secondAttribute="bottom" constant="179" id="W1b-hI-D9c"/>
-                            <constraint firstItem="4vr-y3-WC1" firstAttribute="trailing" secondItem="t3D-MU-eNh" secondAttribute="trailing" id="bvl-WZ-Fmx"/>
-                            <constraint firstItem="Yzl-mb-6p1" firstAttribute="leading" secondItem="UNN-qR-ICO" secondAttribute="leading" id="cJW-os-eEc"/>
-                            <constraint firstItem="4vr-y3-WC1" firstAttribute="top" secondItem="WRG-6n-p6a" secondAttribute="top" constant="33" id="eLW-bL-DBa"/>
-                            <constraint firstAttribute="trailing" secondItem="Yzl-mb-6p1" secondAttribute="trailing" id="mil-GN-xpU"/>
-                            <constraint firstItem="Yzl-mb-6p1" firstAttribute="bottom" secondItem="WRG-6n-p6a" secondAttribute="bottom" id="s4n-M2-ozn"/>
+                            <constraint firstItem="pOu-lO-jkp" firstAttribute="top" secondItem="t3D-MU-eNh" secondAttribute="bottom" constant="18" id="1ev-HB-bfs"/>
+                            <constraint firstItem="Yzl-mb-6p1" firstAttribute="bottom" secondItem="WRG-6n-p6a" secondAttribute="bottom" id="2mi-My-wk4"/>
+                            <constraint firstItem="Hp0-6T-zCt" firstAttribute="leading" secondItem="WRG-6n-p6a" secondAttribute="leading" constant="87" id="4jj-Jz-JrP"/>
+                            <constraint firstItem="4vr-y3-WC1" firstAttribute="top" secondItem="Hp0-6T-zCt" secondAttribute="bottom" constant="10" id="7Tp-8C-vSm"/>
+                            <constraint firstItem="4vr-y3-WC1" firstAttribute="leading" secondItem="t3D-MU-eNh" secondAttribute="leading" id="F5S-mU-Ppm"/>
+                            <constraint firstItem="t3D-MU-eNh" firstAttribute="trailing" secondItem="pOu-lO-jkp" secondAttribute="trailing" id="FJQ-K7-x2f"/>
+                            <constraint firstItem="4vr-y3-WC1" firstAttribute="trailing" secondItem="t3D-MU-eNh" secondAttribute="trailing" id="Glq-Hl-UmR"/>
+                            <constraint firstItem="4vr-y3-WC1" firstAttribute="leading" secondItem="WRG-6n-p6a" secondAttribute="leading" constant="50" id="Hme-5Z-MDm"/>
+                            <constraint firstItem="t3D-MU-eNh" firstAttribute="top" secondItem="UNN-qR-ICO" secondAttribute="top" constant="442" id="fEG-q8-PAb"/>
+                            <constraint firstItem="Yzl-mb-6p1" firstAttribute="centerX" secondItem="pOu-lO-jkp" secondAttribute="centerX" id="mRr-rl-AQH"/>
+                            <constraint firstAttribute="trailing" secondItem="Yzl-mb-6p1" secondAttribute="trailing" id="nL4-RF-lV8"/>
+                            <constraint firstItem="Hp0-6T-zCt" firstAttribute="top" secondItem="WRG-6n-p6a" secondAttribute="top" constant="19" id="rD9-C1-8hs"/>
+                            <constraint firstItem="Yzl-mb-6p1" firstAttribute="top" secondItem="UNN-qR-ICO" secondAttribute="top" id="rFb-Qh-Gqu"/>
+                            <constraint firstItem="t3D-MU-eNh" firstAttribute="leading" secondItem="pOu-lO-jkp" secondAttribute="leading" id="sN7-3j-vML"/>
+                            <constraint firstItem="Yzl-mb-6p1" firstAttribute="leading" secondItem="UNN-qR-ICO" secondAttribute="leading" id="t7D-BQ-aYs"/>
+                            <constraint firstItem="Hp0-6T-zCt" firstAttribute="centerX" secondItem="4vr-y3-WC1" secondAttribute="centerX" id="yDN-Vx-oh9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WRG-6n-p6a"/>
                     </view>
@@ -127,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TkM-eM-4JL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-522" y="313"/>
+            <point key="canvasLocation" x="-523.1884057971015" y="312.22826086956525"/>
         </scene>
         <!--AsanaVC-->
         <scene sceneID="qEz-tU-3Lc">
@@ -357,7 +370,7 @@
                                     <tabBarItem title="Meditation" id="f1B-JZ-UT0"/>
                                 </items>
                             </tabBar>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1800" minValue="300" maxValue="5400" translatesAutoresizingMaskIntoConstraints="NO" id="19C-UF-Rzg">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1800" minValue="3" maxValue="5400" translatesAutoresizingMaskIntoConstraints="NO" id="19C-UF-Rzg">
                                 <rect key="frame" x="62" y="354" width="290" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="6TD-1a-QuC"/>
@@ -422,6 +435,7 @@
         <image name="asana" width="25" height="16"/>
         <image name="background" width="4928" height="3264"/>
         <image name="home" width="17" height="16"/>
+        <image name="meditation" width="524" height="488"/>
         <image name="meditation-1" width="25" height="23"/>
     </resources>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>

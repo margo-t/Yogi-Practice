@@ -21,6 +21,7 @@
 		8D868B751F7BF30600EB0E48 /* Yogi_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B741F7BF30600EB0E48 /* Yogi_PracticeTests.swift */; };
 		8D868B801F7BF30600EB0E48 /* Yogi_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B7F1F7BF30600EB0E48 /* Yogi_PracticeUITests.swift */; };
 		8D868B8E1F7BF35B00EB0E48 /* MeditationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B8D1F7BF35B00EB0E48 /* MeditationVC.swift */; };
+		8DABE0651F859D390085943C /* bell_meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8DABE0671F859D390085943C /* bell_meditation.mp3 */; };
 		8DBFEF001F7DEB4F009FF52F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFEEFF1F7DEB4F009FF52F /* AuthService.swift */; };
 		8DBFEF021F7EB985009FF52F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFEF011F7EB985009FF52F /* HomeVC.swift */; };
 		8DBFEF061F7EBA54009FF52F /* PranayamaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFEF051F7EBA54009FF52F /* PranayamaVC.swift */; };
@@ -75,6 +76,7 @@
 		8D868B7F1F7BF30600EB0E48 /* Yogi_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yogi_PracticeUITests.swift; sourceTree = "<group>"; };
 		8D868B811F7BF30600EB0E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D868B8D1F7BF35B00EB0E48 /* MeditationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationVC.swift; sourceTree = "<group>"; };
+		8DABE0661F859D390085943C /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Base; path = Base.lproj/bell_meditation.mp3; sourceTree = "<group>"; };
 		8DBFEEFF1F7DEB4F009FF52F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		8DBFEF011F7EB985009FF52F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		8DBFEF051F7EBA54009FF52F /* PranayamaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PranayamaVC.swift; sourceTree = "<group>"; };
@@ -206,6 +208,8 @@
 				8D3CFAD01F7DA59600220A9C /* View */,
 				8D74C22E1F7DA882001FDB82 /* Services */,
 				8D3CFABA1F7C588400220A9C /* IBDesignable */,
+				8DABE0671F859D390085943C /* bell_meditation.mp3 */,
+				8DABE0601F858A0A0085943C /* Resources */,
 				8D868B661F7BF30600EB0E48 /* Assets.xcassets */,
 			);
 			path = "Yogi Practice";
@@ -227,6 +231,13 @@
 				8D868B811F7BF30600EB0E48 /* Info.plist */,
 			);
 			path = "Yogi PracticeUITests";
+			sourceTree = "<group>";
+		};
+		8DABE0601F858A0A0085943C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		A08470DE351082DD07AAA5E9 /* Frameworks */ = {
@@ -363,6 +374,7 @@
 			files = (
 				8D868B6A1F7BF30600EB0E48 /* LaunchScreen.storyboard in Resources */,
 				8D3CFAC01F7C5B9600220A9C /* GoogleService-Info.plist in Resources */,
+				8DABE0651F859D390085943C /* bell_meditation.mp3 in Resources */,
 				8D868B671F7BF30600EB0E48 /* Assets.xcassets in Resources */,
 				8D868B621F7BF30600EB0E48 /* Main.storyboard in Resources */,
 			);
@@ -611,6 +623,15 @@
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
+		};
+		8DABE0671F859D390085943C /* bell_meditation.mp3 */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DABE0661F859D390085943C /* Base */,
+			);
+			name = bell_meditation.mp3;
+			path = "Yogi Practice";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 

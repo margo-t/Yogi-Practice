@@ -9,6 +9,7 @@
 import UIKit
 import Firebase;
 import GoogleSignIn;
+import AVFoundation
 
 class MeditationVC: UIViewController {
     
@@ -28,11 +29,28 @@ class MeditationVC: UIViewController {
     @IBOutlet weak var PauseButtonOutlet: UIButton!
     @IBOutlet weak var FinishButtonOutlet: UIButton!
     
+    var meditationSound: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let path = Bundle.main.path(forResource: "bell_meditation", ofType: "mp3")!
+        let soundURL = URL(fileURLWithPath: path)
         
+        do {
+            try meditationSound = AVAudioPlayer(contentsOf: soundURL)
+            meditationSound?.prepareToPlay()
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
+    }
+    
+    func playSound() {
+        if (meditationSound?.isPlaying)!{
+            meditationSound?.stop()
+        }
+        meditationSound?.play()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -138,6 +156,8 @@ class MeditationVC: UIViewController {
             PauseButtonOutlet.isHidden = true
             FinishButtonOutlet.isHidden = false
             PlayButtonOutlet.isHidden = true
+            
+            playSound()
             
         }
         

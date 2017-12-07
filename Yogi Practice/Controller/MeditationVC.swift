@@ -34,23 +34,27 @@ class MeditationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let path = Bundle.main.path(forResource: "bell_meditation", ofType: "mp3")!
-        let soundURL = URL(fileURLWithPath: path)
         
-        do {
-            try meditationSound = AVAudioPlayer(contentsOf: soundURL)
-            meditationSound?.prepareToPlay()
-        } catch let err as NSError {
-            print(err.debugDescription)
-        }
+        //TODO: find better audio
+//        let path = Bundle.main.path(forResource: "bell_meditation", ofType: "mp3")!
+//        let soundURL = URL(fileURLWithPath: path)
+//        
+//        do {
+//            try meditationSound = AVAudioPlayer(contentsOf: soundURL)
+//            meditationSound?.prepareToPlay()
+//        } catch let err as NSError {
+//            print(err.debugDescription)
+//        }
         
     }
     
     func playSound() {
-        if (meditationSound?.isPlaying)!{
-            meditationSound?.stop()
-        }
-        meditationSound?.play()
+        let systemSoundID: SystemSoundID = 1013
+        AudioServicesPlaySystemSound(systemSoundID)
+//        if (meditationSound?.isPlaying)!{
+//            meditationSound?.stop()
+//        }
+//        meditationSound?.play()
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5628C1D70AEBBE141245CD0727DA63AC"
+               BlueprintIdentifier = "B2A893B7858BEB0B49EF5D6B52AAA0D2"
                BuildableName = "Pods_Yogi_Practice.framework"
                BlueprintName = "Pods-Yogi Practice"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5628C1D70AEBBE141245CD0727DA63AC"
+            BlueprintIdentifier = "B2A893B7858BEB0B49EF5D6B52AAA0D2"
             BuildableName = "Pods_Yogi_Practice.framework"
             BlueprintName = "Pods-Yogi Practice"
             ReferencedContainer = "container:Pods.xcodeproj">

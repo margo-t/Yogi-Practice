@@ -19,7 +19,6 @@ class classTypeCell: UITableViewCell {
     
     @IBOutlet weak var classTypeLabel: UILabel!
     
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

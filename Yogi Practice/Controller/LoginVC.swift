@@ -18,6 +18,7 @@ class LoginVC: UIViewController, GIDSignInUIDelegate {
         let signUpVC = storyboard?.instantiateViewController(withIdentifier: "SignUpVC")
         present(signUpVC!, animated: true, completion: nil)
     }
+    
     @IBAction func loginFbButton(_ sender: Any) {
     }
     

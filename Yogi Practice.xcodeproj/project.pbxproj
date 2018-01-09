@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D1AC9F41FB3292100BD5F57 /* 3 Anuloma Viloma Pranayama.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D1AC9F21FB3291E00BD5F57 /* 3 Anuloma Viloma Pranayama.aiff */; };
-		8D1AC9F51FB3292100BD5F57 /* 2 Kapalabhati Pranayama.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D1AC9F31FB3292100BD5F57 /* 2 Kapalabhati Pranayama.aiff */; };
+		8D1456531FDB89CC000060F4 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1456521FDB89CC000060F4 /* SettingsVC.swift */; };
 		8D323A1A1FD4CCD20081F333 /* quotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D323A191FD4CCD10081F333 /* quotes.txt */; };
 		8D361E381FD4ECB20035E640 /* AudioFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D361E371FD4ECB20035E640 /* AudioFile.swift */; };
 		8D3CFABC1F7C590A00220A9C /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CFABB1F7C590A00220A9C /* DesignableView.swift */; };
 		8D3CFABE1F7C595A00220A9C /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CFABD1F7C595A00220A9C /* DesignableButton.swift */; };
-		8D3CFAC01F7C5B9600220A9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D3CFABF1F7C5B7100220A9C /* GoogleService-Info.plist */; };
 		8D3CFAC31F7C649100220A9C /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CFAC21F7C649100220A9C /* SignUpVC.swift */; };
 		8D3CFACA1F7C922100220A9C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CFAC91F7C922100220A9C /* LoginVC.swift */; };
 		8D74C2321F7DA8EB001FDB82 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D74C2311F7DA8EB001FDB82 /* DataService.swift */; };
@@ -21,9 +19,30 @@
 		8D868B621F7BF30600EB0E48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D868B601F7BF30600EB0E48 /* Main.storyboard */; };
 		8D868B651F7BF30600EB0E48 /* Yogi_Practice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B631F7BF30600EB0E48 /* Yogi_Practice.xcdatamodeld */; };
 		8D868B671F7BF30600EB0E48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D868B661F7BF30600EB0E48 /* Assets.xcassets */; };
-		8D868B751F7BF30600EB0E48 /* Yogi_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B741F7BF30600EB0E48 /* Yogi_PracticeTests.swift */; };
-		8D868B801F7BF30600EB0E48 /* Yogi_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B7F1F7BF30600EB0E48 /* Yogi_PracticeUITests.swift */; };
 		8D868B8E1F7BF35B00EB0E48 /* MeditationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D868B8D1F7BF35B00EB0E48 /* MeditationVC.swift */; };
+		8D93AADA1FFBEDB600C8EAAB /* SummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D93AAD91FFBEDB600C8EAAB /* SummaryVC.swift */; };
+		8D93AAF01FFD1E1700C8EAAB /* 01 kapalabhati Pranayama.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AADB1FFD1E0300C8EAAB /* 01 kapalabhati Pranayama.mp3 */; };
+		8D93AAF11FFD1E1700C8EAAB /* 15 kakasana crow mayurasana peacock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AADC1FFD1E0400C8EAAB /* 15 kakasana crow mayurasana peacock.mp3 */; };
+		8D93AAF21FFD1E1700C8EAAB /* 04 single leg raises.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AADD1FFD1E0500C8EAAB /* 04 single leg raises.mp3 */; };
+		8D93AAF31FFD1E1700C8EAAB /* 05 double leg raises.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AADE1FFD1E0500C8EAAB /* 05 double leg raises.mp3 */; };
+		8D93AAF41FFD1E1700C8EAAB /* 09 pascimottanasana sitting forward bend.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AADF1FFD1E0600C8EAAB /* 09 pascimottanasana sitting forward bend.mp3 */; };
+		8D93AAF51FFD1E1700C8EAAB /* 11 bhujangasana cobra.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAE01FFD1E0700C8EAAB /* 11 bhujangasana cobra.mp3 */; };
+		8D93AAF61FFD1E1700C8EAAB /* 16 padahastasana standing forwad bend.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAE11FFD1E0800C8EAAB /* 16 padahastasana standing forwad bend.mp3 */; };
+		8D93AAF71FFD1E1700C8EAAB /* 06 sirsanas headstand.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAE21FFD1E0900C8EAAB /* 06 sirsanas headstand.mp3 */; };
+		8D93AAF81FFD1E1700C8EAAB /* 07 halasana plough.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAE31FFD1E0A00C8EAAB /* 07 halasana plough.mp3 */; };
+		8D93AAF91FFD1E1700C8EAAB /* 18 final relaxation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAE41FFD1E0B00C8EAAB /* 18 final relaxation.mp3 */; };
+		8D93AAFA1FFD1E1700C8EAAB /* 19 final prayers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAE51FFD1E0C00C8EAAB /* 19 final prayers.mp3 */; };
+		8D93AAFB1FFD1E1700C8EAAB /* 08 matyasana fish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAE61FFD1E0D00C8EAAB /* 08 matyasana fish.mp3 */; };
+		8D93AAFC1FFD1E1700C8EAAB /* 17 trikonasana triangle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAE71FFD1E0E00C8EAAB /* 17 trikonasana triangle.mp3 */; };
+		8D93AAFD1FFD1E1700C8EAAB /* 02 Anuloma Viloma Pranayama.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAE81FFD1E1000C8EAAB /* 02 Anuloma Viloma Pranayama.mp3 */; };
+		8D93AAFE1FFD1E1700C8EAAB /* 14 ardhamatsyendrasana half spinal twist.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAE91FFD1E1100C8EAAB /* 14 ardhamatsyendrasana half spinal twist.mp3 */; };
+		8D93AAFF1FFD1E1700C8EAAB /* 10 inclined plane.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAEA1FFD1E1200C8EAAB /* 10 inclined plane.mp3 */; };
+		8D93AB001FFD1E1700C8EAAB /* 12 salabasana locust.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAEB1FFD1E1200C8EAAB /* 12 salabasana locust.mp3 */; };
+		8D93AB011FFD1E1700C8EAAB /* 03 Surya Namaskar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAEC1FFD1E1400C8EAAB /* 03 Surya Namaskar.mp3 */; };
+		8D93AB021FFD1E1700C8EAAB /* 00 opening prayer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAED1FFD1E1500C8EAAB /* 00 opening prayer.mp3 */; };
+		8D93AB031FFD1E1700C8EAAB /* 07 a sarvangasana shoulderstand.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAEE1FFD1E1600C8EAAB /* 07 a sarvangasana shoulderstand.mp3 */; };
+		8D93AB041FFD1E1700C8EAAB /* 13 dhanurasana bow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AAEF1FFD1E1700C8EAAB /* 13 dhanurasana bow.mp3 */; };
+		8D93AB081FFDB39100C8EAAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D93AB071FFDB39100C8EAAB /* GoogleService-Info.plist */; };
 		8DAAFD181FCB0C2E0044FA8C /* YogaClassTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAFD171FCB0C2E0044FA8C /* YogaClassTableVC.swift */; };
 		8DAAFD1A1FCBA4390044FA8C /* classTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAFD191FCBA4390044FA8C /* classTypeCell.swift */; };
 		8DBFEF001F7DEB4F009FF52F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFEEFF1F7DEB4F009FF52F /* AuthService.swift */; };
@@ -58,13 +77,11 @@
 		6A83A909347A5B43BF0630F4 /* Pods-Yogi PracticeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yogi PracticeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yogi PracticeUITests/Pods-Yogi PracticeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		752237452526ED2708E673E6 /* Pods_Yogi_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yogi_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		756058C303E140752D1E3BDD /* Pods-Yogi PracticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yogi PracticeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yogi PracticeTests/Pods-Yogi PracticeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8D1AC9F21FB3291E00BD5F57 /* 3 Anuloma Viloma Pranayama.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "3 Anuloma Viloma Pranayama.aiff"; sourceTree = "<group>"; };
-		8D1AC9F31FB3292100BD5F57 /* 2 Kapalabhati Pranayama.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "2 Kapalabhati Pranayama.aiff"; sourceTree = "<group>"; };
+		8D1456521FDB89CC000060F4 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		8D323A191FD4CCD10081F333 /* quotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = quotes.txt; sourceTree = "<group>"; };
 		8D361E371FD4ECB20035E640 /* AudioFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFile.swift; sourceTree = "<group>"; };
 		8D3CFABB1F7C590A00220A9C /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		8D3CFABD1F7C595A00220A9C /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
-		8D3CFABF1F7C5B7100220A9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D3CFAC21F7C649100220A9C /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		8D3CFAC51F7C7FDF00220A9C /* Yogi Practice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yogi Practice-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D3CFAC91F7C922100220A9C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -78,12 +95,31 @@
 		8D868B691F7BF30600EB0E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D868B6B1F7BF30600EB0E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D868B701F7BF30600EB0E48 /* Yogi PracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yogi PracticeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D868B741F7BF30600EB0E48 /* Yogi_PracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yogi_PracticeTests.swift; sourceTree = "<group>"; };
-		8D868B761F7BF30600EB0E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D868B7B1F7BF30600EB0E48 /* Yogi PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yogi PracticeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D868B7F1F7BF30600EB0E48 /* Yogi_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yogi_PracticeUITests.swift; sourceTree = "<group>"; };
-		8D868B811F7BF30600EB0E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D868B8D1F7BF35B00EB0E48 /* MeditationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationVC.swift; sourceTree = "<group>"; };
+		8D93AAD91FFBEDB600C8EAAB /* SummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryVC.swift; sourceTree = "<group>"; };
+		8D93AADB1FFD1E0300C8EAAB /* 01 kapalabhati Pranayama.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 kapalabhati Pranayama.mp3"; sourceTree = "<group>"; };
+		8D93AADC1FFD1E0400C8EAAB /* 15 kakasana crow mayurasana peacock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "15 kakasana crow mayurasana peacock.mp3"; sourceTree = "<group>"; };
+		8D93AADD1FFD1E0500C8EAAB /* 04 single leg raises.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "04 single leg raises.mp3"; sourceTree = "<group>"; };
+		8D93AADE1FFD1E0500C8EAAB /* 05 double leg raises.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "05 double leg raises.mp3"; sourceTree = "<group>"; };
+		8D93AADF1FFD1E0600C8EAAB /* 09 pascimottanasana sitting forward bend.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "09 pascimottanasana sitting forward bend.mp3"; sourceTree = "<group>"; };
+		8D93AAE01FFD1E0700C8EAAB /* 11 bhujangasana cobra.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "11 bhujangasana cobra.mp3"; sourceTree = "<group>"; };
+		8D93AAE11FFD1E0800C8EAAB /* 16 padahastasana standing forwad bend.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "16 padahastasana standing forwad bend.mp3"; sourceTree = "<group>"; };
+		8D93AAE21FFD1E0900C8EAAB /* 06 sirsanas headstand.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "06 sirsanas headstand.mp3"; sourceTree = "<group>"; };
+		8D93AAE31FFD1E0A00C8EAAB /* 07 halasana plough.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "07 halasana plough.mp3"; sourceTree = "<group>"; };
+		8D93AAE41FFD1E0B00C8EAAB /* 18 final relaxation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "18 final relaxation.mp3"; sourceTree = "<group>"; };
+		8D93AAE51FFD1E0C00C8EAAB /* 19 final prayers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "19 final prayers.mp3"; sourceTree = "<group>"; };
+		8D93AAE61FFD1E0D00C8EAAB /* 08 matyasana fish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "08 matyasana fish.mp3"; sourceTree = "<group>"; };
+		8D93AAE71FFD1E0E00C8EAAB /* 17 trikonasana triangle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "17 trikonasana triangle.mp3"; sourceTree = "<group>"; };
+		8D93AAE81FFD1E1000C8EAAB /* 02 Anuloma Viloma Pranayama.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "02 Anuloma Viloma Pranayama.mp3"; sourceTree = "<group>"; };
+		8D93AAE91FFD1E1100C8EAAB /* 14 ardhamatsyendrasana half spinal twist.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "14 ardhamatsyendrasana half spinal twist.mp3"; sourceTree = "<group>"; };
+		8D93AAEA1FFD1E1200C8EAAB /* 10 inclined plane.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "10 inclined plane.mp3"; sourceTree = "<group>"; };
+		8D93AAEB1FFD1E1200C8EAAB /* 12 salabasana locust.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "12 salabasana locust.mp3"; sourceTree = "<group>"; };
+		8D93AAEC1FFD1E1400C8EAAB /* 03 Surya Namaskar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "03 Surya Namaskar.mp3"; sourceTree = "<group>"; };
+		8D93AAED1FFD1E1500C8EAAB /* 00 opening prayer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "00 opening prayer.mp3"; sourceTree = "<group>"; };
+		8D93AAEE1FFD1E1600C8EAAB /* 07 a sarvangasana shoulderstand.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "07 a sarvangasana shoulderstand.mp3"; sourceTree = "<group>"; };
+		8D93AAEF1FFD1E1700C8EAAB /* 13 dhanurasana bow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "13 dhanurasana bow.mp3"; sourceTree = "<group>"; };
+		8D93AB071FFDB39100C8EAAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8DAAFD171FCB0C2E0044FA8C /* YogaClassTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaClassTableVC.swift; sourceTree = "<group>"; };
 		8DAAFD191FCBA4390044FA8C /* classTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classTypeCell.swift; sourceTree = "<group>"; };
 		8DBFEEFF1F7DEB4F009FF52F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -138,8 +174,27 @@
 		8D1AC9EF1FB3281600BD5F57 /* PranayamaClass */ = {
 			isa = PBXGroup;
 			children = (
-				8D1AC9F31FB3292100BD5F57 /* 2 Kapalabhati Pranayama.aiff */,
-				8D1AC9F21FB3291E00BD5F57 /* 3 Anuloma Viloma Pranayama.aiff */,
+				8D93AAED1FFD1E1500C8EAAB /* 00 opening prayer.mp3 */,
+				8D93AADB1FFD1E0300C8EAAB /* 01 kapalabhati Pranayama.mp3 */,
+				8D93AAE81FFD1E1000C8EAAB /* 02 Anuloma Viloma Pranayama.mp3 */,
+				8D93AAEC1FFD1E1400C8EAAB /* 03 Surya Namaskar.mp3 */,
+				8D93AADD1FFD1E0500C8EAAB /* 04 single leg raises.mp3 */,
+				8D93AADE1FFD1E0500C8EAAB /* 05 double leg raises.mp3 */,
+				8D93AAE21FFD1E0900C8EAAB /* 06 sirsanas headstand.mp3 */,
+				8D93AAEE1FFD1E1600C8EAAB /* 07 a sarvangasana shoulderstand.mp3 */,
+				8D93AAE31FFD1E0A00C8EAAB /* 07 halasana plough.mp3 */,
+				8D93AAE61FFD1E0D00C8EAAB /* 08 matyasana fish.mp3 */,
+				8D93AADF1FFD1E0600C8EAAB /* 09 pascimottanasana sitting forward bend.mp3 */,
+				8D93AAEA1FFD1E1200C8EAAB /* 10 inclined plane.mp3 */,
+				8D93AAE01FFD1E0700C8EAAB /* 11 bhujangasana cobra.mp3 */,
+				8D93AAEB1FFD1E1200C8EAAB /* 12 salabasana locust.mp3 */,
+				8D93AAEF1FFD1E1700C8EAAB /* 13 dhanurasana bow.mp3 */,
+				8D93AAE91FFD1E1100C8EAAB /* 14 ardhamatsyendrasana half spinal twist.mp3 */,
+				8D93AADC1FFD1E0400C8EAAB /* 15 kakasana crow mayurasana peacock.mp3 */,
+				8D93AAE11FFD1E0800C8EAAB /* 16 padahastasana standing forwad bend.mp3 */,
+				8D93AAE71FFD1E0E00C8EAAB /* 17 trikonasana triangle.mp3 */,
+				8D93AAE41FFD1E0B00C8EAAB /* 18 final relaxation.mp3 */,
+				8D93AAE51FFD1E0C00C8EAAB /* 19 final prayers.mp3 */,
 			);
 			path = PranayamaClass;
 			sourceTree = "<group>";
@@ -163,6 +218,8 @@
 				8DBFEF051F7EBA54009FF52F /* PranayamaVC.swift */,
 				8DAAFD171FCB0C2E0044FA8C /* YogaClassTableVC.swift */,
 				8DAAFD191FCBA4390044FA8C /* classTypeCell.swift */,
+				8D1456521FDB89CC000060F4 /* SettingsVC.swift */,
+				8D93AAD91FFBEDB600C8EAAB /* SummaryVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,8 +235,6 @@
 		8D3CFAD01F7DA59600220A9C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8D868B601F7BF30600EB0E48 /* Main.storyboard */,
-				8D868B681F7BF30600EB0E48 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,8 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				8D868B5B1F7BF30600EB0E48 /* Yogi Practice */,
-				8D868B731F7BF30600EB0E48 /* Yogi PracticeTests */,
-				8D868B7E1F7BF30600EB0E48 /* Yogi PracticeUITests */,
 				8D868B5A1F7BF30600EB0E48 /* Products */,
 				2666899D163BCC2D4A956448 /* Pods */,
 				A08470DE351082DD07AAA5E9 /* Frameworks */,
@@ -222,9 +275,11 @@
 				8D868B5C1F7BF30600EB0E48 /* AppDelegate.swift */,
 				8D868B631F7BF30600EB0E48 /* Yogi_Practice.xcdatamodeld */,
 				8D3CFAC51F7C7FDF00220A9C /* Yogi Practice-Bridging-Header.h */,
+				8D93AB071FFDB39100C8EAAB /* GoogleService-Info.plist */,
 				8D868B6B1F7BF30600EB0E48 /* Info.plist */,
-				8D3CFABF1F7C5B7100220A9C /* GoogleService-Info.plist */,
 				8D323A191FD4CCD10081F333 /* quotes.txt */,
+				8D868B601F7BF30600EB0E48 /* Main.storyboard */,
+				8D868B681F7BF30600EB0E48 /* LaunchScreen.storyboard */,
 				8D3CFACF1F7DA58C00220A9C /* Model */,
 				8D3CFAC11F7C643F00220A9C /* Controller */,
 				8D3CFAD01F7DA59600220A9C /* View */,
@@ -235,24 +290,6 @@
 				8D1AC9EF1FB3281600BD5F57 /* PranayamaClass */,
 			);
 			path = "Yogi Practice";
-			sourceTree = "<group>";
-		};
-		8D868B731F7BF30600EB0E48 /* Yogi PracticeTests */ = {
-			isa = PBXGroup;
-			children = (
-				8D868B741F7BF30600EB0E48 /* Yogi_PracticeTests.swift */,
-				8D868B761F7BF30600EB0E48 /* Info.plist */,
-			);
-			path = "Yogi PracticeTests";
-			sourceTree = "<group>";
-		};
-		8D868B7E1F7BF30600EB0E48 /* Yogi PracticeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8D868B7F1F7BF30600EB0E48 /* Yogi_PracticeUITests.swift */,
-				8D868B811F7BF30600EB0E48 /* Info.plist */,
-			);
-			path = "Yogi PracticeUITests";
 			sourceTree = "<group>";
 		};
 		8DABE0601F858A0A0085943C /* Resources */ = {
@@ -355,6 +392,9 @@
 							com.apple.Keychain = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					8D868B6F1F7BF30600EB0E48 = {
@@ -394,12 +434,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D93AAFB1FFD1E1700C8EAAB /* 08 matyasana fish.mp3 in Resources */,
+				8D93AAFA1FFD1E1700C8EAAB /* 19 final prayers.mp3 in Resources */,
+				8D93AAF71FFD1E1700C8EAAB /* 06 sirsanas headstand.mp3 in Resources */,
+				8D93AAF21FFD1E1700C8EAAB /* 04 single leg raises.mp3 in Resources */,
+				8D93AAFD1FFD1E1700C8EAAB /* 02 Anuloma Viloma Pranayama.mp3 in Resources */,
+				8D93AB001FFD1E1700C8EAAB /* 12 salabasana locust.mp3 in Resources */,
+				8D93AB081FFDB39100C8EAAB /* GoogleService-Info.plist in Resources */,
+				8D93AB031FFD1E1700C8EAAB /* 07 a sarvangasana shoulderstand.mp3 in Resources */,
+				8D93AB021FFD1E1700C8EAAB /* 00 opening prayer.mp3 in Resources */,
+				8D93AAFE1FFD1E1700C8EAAB /* 14 ardhamatsyendrasana half spinal twist.mp3 in Resources */,
+				8D93AB041FFD1E1700C8EAAB /* 13 dhanurasana bow.mp3 in Resources */,
 				8D323A1A1FD4CCD20081F333 /* quotes.txt in Resources */,
-				8D3CFAC01F7C5B9600220A9C /* GoogleService-Info.plist in Resources */,
-				8D1AC9F51FB3292100BD5F57 /* 2 Kapalabhati Pranayama.aiff in Resources */,
-				8D1AC9F41FB3292100BD5F57 /* 3 Anuloma Viloma Pranayama.aiff in Resources */,
+				8D93AAF01FFD1E1700C8EAAB /* 01 kapalabhati Pranayama.mp3 in Resources */,
+				8D93AAF51FFD1E1700C8EAAB /* 11 bhujangasana cobra.mp3 in Resources */,
+				8D93AAFC1FFD1E1700C8EAAB /* 17 trikonasana triangle.mp3 in Resources */,
+				8D93AAF31FFD1E1700C8EAAB /* 05 double leg raises.mp3 in Resources */,
 				8D868B671F7BF30600EB0E48 /* Assets.xcassets in Resources */,
+				8D93AAF81FFD1E1700C8EAAB /* 07 halasana plough.mp3 in Resources */,
 				8D868B621F7BF30600EB0E48 /* Main.storyboard in Resources */,
+				8D93AAF91FFD1E1700C8EAAB /* 18 final relaxation.mp3 in Resources */,
+				8D93AAF11FFD1E1700C8EAAB /* 15 kakasana crow mayurasana peacock.mp3 in Resources */,
+				8D93AAFF1FFD1E1700C8EAAB /* 10 inclined plane.mp3 in Resources */,
+				8D93AAF41FFD1E1700C8EAAB /* 09 pascimottanasana sitting forward bend.mp3 in Resources */,
+				8D93AB011FFD1E1700C8EAAB /* 03 Surya Namaskar.mp3 in Resources */,
+				8D93AAF61FFD1E1700C8EAAB /* 16 padahastasana standing forwad bend.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +618,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Yogi Practice/Pods-Yogi Practice-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -567,6 +627,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -586,6 +647,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D3CFAC31F7C649100220A9C /* SignUpVC.swift in Sources */,
+				8D93AADA1FFBEDB600C8EAAB /* SummaryVC.swift in Sources */,
 				8DBFEF021F7EB985009FF52F /* HomeVC.swift in Sources */,
 				8DBFEF061F7EBA54009FF52F /* PranayamaVC.swift in Sources */,
 				8D868B8E1F7BF35B00EB0E48 /* MeditationVC.swift in Sources */,
@@ -599,6 +661,7 @@
 				8D868B5D1F7BF30600EB0E48 /* AppDelegate.swift in Sources */,
 				8D3CFABE1F7C595A00220A9C /* DesignableButton.swift in Sources */,
 				8D74C2321F7DA8EB001FDB82 /* DataService.swift in Sources */,
+				8D1456531FDB89CC000060F4 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,7 +669,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D868B751F7BF30600EB0E48 /* Yogi_PracticeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,7 +676,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D868B801F7BF30600EB0E48 /* Yogi_PracticeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,7 +762,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -752,7 +813,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -766,13 +827,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "Yogi Practice/Yogi Practice.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4HN6T9DZP9;
+				DEVELOPMENT_TEAM = B8D7WKEJJE;
 				INFOPLIST_FILE = "Yogi Practice/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "foxberryfields.Yogi-Practice";
+				PRODUCT_BUNDLE_IDENTIFIER = org.sivananda.SivanandaYoga;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Yogi Practice/Yogi Practice-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -786,13 +851,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "Yogi Practice/Yogi Practice.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4HN6T9DZP9;
+				DEVELOPMENT_TEAM = B8D7WKEJJE;
 				INFOPLIST_FILE = "Yogi Practice/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "foxberryfields.Yogi-Practice";
+				PRODUCT_BUNDLE_IDENTIFIER = org.sivananda.SivanandaYoga;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Yogi Practice/Yogi Practice-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

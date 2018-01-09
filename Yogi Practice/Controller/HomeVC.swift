@@ -9,19 +9,72 @@
 import UIKit
 import Firebase
 
+
 class HomeVC: UIViewController {
     
     var quoteList: Array<String> = []
+    var totalMeditation = 0
+    var totalPractice = 0
+    
+    var medTime = 0
+    var pracTime = 0
+    
+   
+    @IBOutlet weak var totalTimeLabel: UIButton!
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+        let userID = Auth.auth().currentUser?.uid
+        let ref = Database.database().reference()
+        
+        
+        if userID != nil {
+        ref.child("users").child(userID!).child("meditation").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get time value
+            
+            if let value = snapshot.value as? NSDictionary {
+                
+                self.medTime = value["totalTime"] as? Int ?? 0
+                print(self.medTime)
+                
+                self.totalMeditation = (self.medTime%3600)/60
+                print(self.totalMeditation)
+               
+            }
+            
+                    ref.child("users").child(userID!).child("practice").observeSingleEvent(of: .value, with: { (snapshot) in
+                        // Get time value
+            
+                        if let value = snapshot.value as? NSDictionary {
+            
+                            self.pracTime = value["totalTime"] as? Int ?? 0
+                            print(self.pracTime)
+            
+                            self.totalPractice = (self.pracTime%3600)/60
+                            
+                            let title = "Total Practice Time: \(self.totalMeditation+self.totalPractice) mins"
+                            
+                            self.totalTimeLabel.setTitle(title, for: .normal)
+                        }
+                    })
+            
+        })
+        
+
+        }
         SetDate();
         quoteList = getQuoteList();
-        print(quoteList)
         
         updateQuote(quoteList: getQuoteList());
         
+        
     }
+    
+    
     
     func updateQuote(quoteList: Array<String>){
         let userDefaults = UserDefaults.standard
@@ -67,6 +120,7 @@ class HomeVC: UIViewController {
         }
     }
     
+    
     func SetDate(){
         let date = Date()
         let formatter = DateFormatter()
@@ -83,31 +137,21 @@ class HomeVC: UIViewController {
             let nextScene =  segue.destination as! PranayamaVC
             
             // Pass the selected object to the new view controller.
-                let type = "Standard Class"
+                let type = "Pranayama Class"
                 nextScene.selectedType = type
+        }
+        
+        else if segue.identifier == "summary" {
+            let nextScene =  segue.destination as! SummaryVC
+
+            // Pass the selected object to the new view controller.
+            //let type = "Pranayama Class"
+            nextScene.practiceTime = totalPractice
+            nextScene.meditationTime = totalMeditation
         }
     }
     
-    @IBAction func signOutButton(_ sender: Any) {
-        
-        let logoutPopup = UIAlertController(title: "Logout?", message: "Are you sure you want to logout?", preferredStyle: .actionSheet)
-        let logoutAction = UIAlertAction(title: "Logout?", style: .destructive) { (buttonTapped) in
-            do {
-                try Auth.auth().signOut()
-                let LoginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
-                self.present(LoginVC!, animated: true, completion: nil)
-            } catch {
-                print(error)
-            }
-        }
-        logoutPopup.addAction(logoutAction)
-        
-        logoutPopup.popoverPresentationController?.sourceView = self.view
-        logoutPopup.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
-        logoutPopup.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-        present(logoutPopup, animated: true, completion: nil)
-        
-    }
+
     
     func selectQuote(quoteList: Array<String>) -> Int{
         let randomIndex = Int(arc4random_uniform(UInt32(quoteList.count)))

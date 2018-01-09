@@ -34,18 +34,14 @@ class MeditationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UIApplication.shared.isIdleTimerDisabled = true
         
-        //TODO: find better audio
-//        let path = Bundle.main.path(forResource: "bell_meditation", ofType: "mp3")!
-//        let soundURL = URL(fileURLWithPath: path)
-//        
-//        do {
-//            try meditationSound = AVAudioPlayer(contentsOf: soundURL)
-//            meditationSound?.prepareToPlay()
-//        } catch let err as NSError {
-//            print(err.debugDescription)
-//        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidLoad()
         
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
     func playSound() {
@@ -114,7 +110,7 @@ class MeditationVC: UIViewController {
             print("passed true for CurrentMeditationTime > 0")
             FinishButtonOutlet.isEnabled = false
             DataService.instance.updateMeditationTime(withTime: CurrentMeditationTime, andTotalTime: TotalMeditationTime,
-                                                      forUid: (Auth.auth().currentUser?.uid)!, forDay: today, sendComplete: {(isComplete) in
+                                                      forUid: (Auth.auth().currentUser?.uid)!, toRef: "meditation", forDay: today, sendComplete: {(isComplete) in
                                                         if isComplete {
                                                             self.FinishButtonOutlet.isEnabled = true
                                                             print("sent to Firebase")

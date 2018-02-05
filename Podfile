@@ -10,7 +10,9 @@ target 'Yogi Practice' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'GoogleSignIn'
-  pod 'Charts'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKShareKit'
+  pod 'FBSDKLoginKit'
 
   target 'Yogi PracticeTests' do
     inherit! :search_paths

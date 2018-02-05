@@ -7,14 +7,14 @@
 //
 
 import UIKit
-import Charts
+
 
 class SummaryVC: UIViewController {
     
     var meditationTime = 0
     var practiceTime = 0
     
-    @IBOutlet weak var pieChart: PieChartView!
+   // @IBOutlet weak var pieChart: PieChartView!
     
 
     override func viewDidLoad() {
@@ -23,34 +23,34 @@ class SummaryVC: UIViewController {
         print(meditationTime)
         print(practiceTime)
         
-        pieChartUpdate()
+        //pieChartUpdate()
 
     }
     
-        func pieChartUpdate () {
-            
-            let entry1 = PieChartDataEntry(value: Double(meditationTime), label: "Meditation")
-            let entry2 = PieChartDataEntry(value: Double(practiceTime), label: "Asana")
-    
-            let dataSet = PieChartDataSet(values: [entry1, entry2], label: " ")
-            let data = PieChartData(dataSet: dataSet)
-            
-             // chart setup
-            
-            pieChart.data = data
-            pieChart.chartDescription?.text = " "
-           
-            dataSet.colors = [UIColor(red:0.36, green:0.74, blue:0.58, alpha:1.0),
-                          UIColor(red:0.67, green:0.40, blue:0.80, alpha:1.0)]
-            
-    
-
-            pieChart.noDataText = "No data available"
-            pieChart.centerText = ("Total: \(meditationTime+practiceTime) mins")
-    
-            //This must stay at end of function
-            pieChart.notifyDataSetChanged()
-        }
+//        func pieChartUpdate () {
+//
+//            let entry1 = PieChartDataEntry(value: Double(meditationTime), label: "Meditation")
+//            let entry2 = PieChartDataEntry(value: Double(practiceTime), label: "Asana")
+//
+//            let dataSet = PieChartDataSet(values: [entry1, entry2], label: " ")
+//            let data = PieChartData(dataSet: dataSet)
+//
+//             // chart setup
+//
+//            pieChart.data = data
+//            pieChart.chartDescription?.text = " "
+//
+//            dataSet.colors = [UIColor(red:0.36, green:0.74, blue:0.58, alpha:1.0),
+//                          UIColor(red:0.67, green:0.40, blue:0.80, alpha:1.0)]
+//
+//
+//
+//            pieChart.noDataText = "No data available"
+//            pieChart.centerText = ("Total: \(meditationTime+practiceTime) mins")
+//
+//            //This must stay at end of function
+//            pieChart.notifyDataSetChanged()
+//        }
 
 
 

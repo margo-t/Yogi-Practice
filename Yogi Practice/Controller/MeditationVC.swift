@@ -39,7 +39,7 @@ class MeditationVC: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidLoad()
+        //super.viewDidLoad()
         
         UIApplication.shared.isIdleTimerDisabled = false
     }
@@ -114,9 +114,12 @@ class MeditationVC: UIViewController {
                                                         if isComplete {
                                                             self.FinishButtonOutlet.isEnabled = true
                                                             print("sent to Firebase")
+                                                            self.timer.invalidate()
+                                                            self.CurrentMeditationTime = 0
                                                             
                                                         }
                                                         else {
+                                                            self.timer.invalidate()
                                                             self.FinishButtonOutlet.isEnabled = true
                                                             print("Error sending")
                                                         }

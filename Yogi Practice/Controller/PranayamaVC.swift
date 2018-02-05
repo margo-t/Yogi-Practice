@@ -13,11 +13,11 @@ import GoogleSignIn
 
 //TODO change layout from asana
 
-class PranayamaVC: UIViewController {
+class PranayamaVC: UIViewController, UITableViewDelegate {
     
     //set variables
     var Audios: Array<URL?> = []
-    var practiceRecording: AVAudioPlayer?
+    var practiceRecording: AVPlayer?
     var playlist: Array<AudioFile> = []
     var soundURL = URL(string: "https://www.apple.com")
     
@@ -33,6 +33,7 @@ class PranayamaVC: UIViewController {
     @IBOutlet weak var audioTitle: UILabel!
     @IBOutlet weak var audioDescription: UITextView!
     
+    @IBOutlet weak var tableView: UITableView!
     
     var selectedType: String? = ""
     var counter: Int = 0
@@ -40,25 +41,72 @@ class PranayamaVC: UIViewController {
     // pause button
     @IBAction func pauseBtn(_ sender: UIButton) {
         
-        if (practiceRecording?.isPlaying)! {
             practiceRecording?.pause()
             timer.invalidate()
             self.PauseButton.isHidden = true
             self.PlayButton.isHidden = false
+        
+        
+    }
+    
+    // next button
+    @IBAction func nextBtn(_ sender: UIButton) {
+        
+        
+        practiceRecording?.pause()
+         if (counter<=playlist.count-1){
+//
+            counter += 1
+            setNextAudio()
+            //practiceRecording?.play()
+        }
+        else {
+
+//            savePractice()
+//
+//            let alert = UIAlertController(title: "Congratulations!", message: "You have finished the practice", preferredStyle: UIAlertControllerStyle.alert)
+//            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+//
+//            counter = 0
+            setNextAudio()
         }
         
+    }
+    
+    //play button
+    @IBAction func playBtn(_ sender: UIButton) {
+        
+        setObserver()
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(PranayamaVC.counterTimer), userInfo: nil, repeats: true)
+        
+        practiceRecording?.play()
+        self.PauseButton.isHidden = false
+        self.PlayButton.isHidden = true
+        
+    }
+    
+
+    //restart button
+    @IBAction func restartButton(_ sender: UIButton) {
+        
+        self.practiceRecording?.seek(to: kCMTimeZero)
+        self.practiceRecording?.play()
+        
+//        practiceRecording?.s
+//        practiceRecording?.time = 0
+//        practiceRecording?.play()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidLoad()
         
-        if (practiceRecording?.isPlaying)! {
-            practiceRecording?.pause()
-            timer.invalidate()
-            //counter = 0
-            self.PauseButton.isHidden = true
-            self.PlayButton.isHidden = false
-        }
+        practiceRecording?.pause()
+        timer.invalidate()
+        self.PauseButton.isHidden = true
+        self.PlayButton.isHidden = false
+        
         
         UIApplication.shared.isIdleTimerDisabled = false
     }
@@ -70,71 +118,22 @@ class PranayamaVC: UIViewController {
         let userID = Auth.auth().currentUser?.uid
         let ref = Database.database().reference()
         ref.child("users").child(userID!).child("practice").observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get time value
             
+            // Get time value
             if let value = snapshot.value as? NSDictionary {
-                //let value = snapshot.value as! NSDictionary
-                self.PracTime = value["totalTime"] as? Int ?? 0
-                print(self.PracTime)
-                self.TotalPracticeTime = self.PracTime
                 
+                self.PracTime = value["totalTime"] as? Int ?? 0
+                self.TotalPracticeTime = self.PracTime
             }
             
         })
         
     }
     
-    
-    
-    // next button
-    @IBAction func nextBtn(_ sender: UIButton) {
-        
-        if practiceRecording?.isPlaying == true {
-            practiceRecording?.pause()
-        }
-        
-        if (counter<playlist.count-1){
-            
-            counter += 1
-            setNextAudio()
-            practiceRecording?.play()
-        }
-        else {
-            
-            savePractice()
-            
-            let alert = UIAlertController(title: "Congratulations!", message: "You have finished the practice", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            
-            counter = 0
-            setNextAudio()
-        }
-        
-    }
-    
-    //play button
-    @IBAction func playBtn(_ sender: UIButton) {
-        
-        if practiceRecording?.isPlaying == false {
-            
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(PranayamaVC.counterTimer), userInfo: nil, repeats: true)
-        
-            practiceRecording?.play()
-            self.PauseButton.isHidden = false 
-            self.PlayButton.isHidden = true
-        }
-    }
-
-    //restart button
-    @IBAction func restartButton(_ sender: UIButton) {
-        practiceRecording?.pause()
-        practiceRecording?.currentTime = 0
-        practiceRecording?.play()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //HomeVC.delegate = self
         
         UIApplication.shared.isIdleTimerDisabled = true
         
@@ -145,14 +144,54 @@ class PranayamaVC: UIViewController {
         setNextAudio()
     }
     
+
+    
     func setNextAudio(){
-        audioTitle.text=playlist[counter].name;
-        audioDescription.text=playlist[counter].description;
-        soundURL = playlist[counter].URL
-        do {
-            try practiceRecording = AVAudioPlayer(contentsOf: (soundURL)!)} catch let err as NSError {
-                print(err.debugDescription)
-                
+        
+        if (counter<=playlist.count-1){
+            
+            //counter += 1
+            //setNextAudio()
+            //practiceRecording?.play()
+            
+            
+            audioTitle.text=playlist[counter].name;
+            audioDescription.text=playlist[counter].description;
+            soundURL = playlist[counter].URL
+            
+            practiceRecording = AVPlayer(url: (soundURL)!)
+            
+            if counter != 0{
+                setObserver()
+                self.practiceRecording?.play()
+            }
+        }
+        else {
+            print("ready to save - ")
+            print(CurrentPracticeTime)
+            savePractice()
+            
+            let alert = UIAlertController(title: "Congratulations!", message: "You have finished the practice", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+            counter = 0
+            //readyToSend()
+            //setNextAudio()
+            
+            
+        }
+    }
+    
+    func setObserver(){
+        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.practiceRecording?.currentItem, queue: .main) { _ in
+            
+            self.counter += 1
+            print("--observer - AVPlayerItemDidPlayToEndTime---")
+            print(self.counter)
+            self.setNextAudio()
+            
+            
         }
     }
     
@@ -206,8 +245,8 @@ class PranayamaVC: UIViewController {
             
         case "Pranayama Class":
             playlist = PranayamaClass;
-            playlist[0].URL=Audios[1]
-            playlist[1].URL=Audios[2]
+            playlist[0].URL=Audios[0]
+            playlist[1].URL=Audios[1]
         default:
             playlist = StandardClass;
         }
@@ -223,15 +262,15 @@ class PranayamaVC: UIViewController {
             
             let audioPath = try FileManager.default.contentsOfDirectory(at: folderURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
             for audio in audioPath {
-                var myAudio = audio.absoluteString
+                let myAudio = audio.absoluteString
                 
                 if myAudio.contains(".mp3") {
-                    print("this is myAudio----->"+myAudio)
-                    let findString = myAudio.components(separatedBy: "/")
-                    myAudio = findString[findString.count-1]
-                    myAudio = myAudio.replacingOccurrences(of: "%20", with: " ")
-                    myAudio = myAudio.replacingOccurrences(of: ".mp3", with: "")
-                    print(myAudio)
+                    //print("this is myAudio----->"+myAudio)
+//                    let findString = myAudio.components(separatedBy: "/")
+//                    myAudio = findString[findString.count-1]
+//                    myAudio = myAudio.replacingOccurrences(of: "%20", with: " ")
+//                    myAudio = myAudio.replacingOccurrences(of: ".mp3", with: "")
+                    //print(myAudio)
                     
                     Audios.append(audio)
                     }
@@ -242,13 +281,19 @@ class PranayamaVC: UIViewController {
         }
     }
     
+//    func readyToSend(){
+//        //let nextViewController = HomeVC
+//
+//        navigationController?.pushViewController(HomeVC, animated: false)
+//    }
+    
     func savePractice() {
         TotalPracticeTime += CurrentPracticeTime
         let date = Date()
         let calendar = Calendar.current
         let components = calendar.dateComponents([.year, .month, .day], from: date)
         let today = String(components.day!)+"-"+String(components.month!)+"-"+String(components.year!)
-        print(today)
+        print("today: "+today)
         
         //Update Firebase
         if CurrentPracticeTime > 0 {
@@ -257,14 +302,18 @@ class PranayamaVC: UIViewController {
                                                       forUid: (Auth.auth().currentUser?.uid)!, toRef: "practice", forDay: today, sendComplete: {(isComplete) in
                                                         if isComplete {
                                         
+                                                            self.timer.invalidate()
+                                            
+                                                            self.CurrentPracticeTime = 0
                                                             print("sent to Firebase")
                                                             
                                                         }
                                                         else {
-                                                        
+                                                            self.timer.invalidate()
                                                             print("Error sending")
                                                         }
             })
+            
         }
     }
     
@@ -387,6 +436,7 @@ class PranayamaVC: UIViewController {
     @objc func counterTimer() {
         
         CurrentPracticeTime += 1
+        print(CurrentPracticeTime)
     }
     
     

@@ -12,6 +12,8 @@ import Firebase
 
 class HomeVC: UIViewController {
     
+    weak var delegate: DirectionDelegate?
+    
     var quoteList: Array<String> = []
     var totalMeditation = 0
     var totalPractice = 0
@@ -39,10 +41,10 @@ class HomeVC: UIViewController {
             if let value = snapshot.value as? NSDictionary {
                 
                 self.medTime = value["totalTime"] as? Int ?? 0
-                print(self.medTime)
+                //print(self.medTime)
                 
                 self.totalMeditation = (self.medTime%3600)/60
-                print(self.totalMeditation)
+                //print(self.totalMeditation)
                
             }
             
@@ -52,7 +54,7 @@ class HomeVC: UIViewController {
                         if let value = snapshot.value as? NSDictionary {
             
                             self.pracTime = value["totalTime"] as? Int ?? 0
-                            print(self.pracTime)
+                            //print(self.pracTime)
             
                             self.totalPractice = (self.pracTime%3600)/60
                             
@@ -83,7 +85,7 @@ class HomeVC: UIViewController {
             if let lastDate = lastRetrieval["date"] as? NSDate {
                 if let index = lastRetrieval["index"] as? Int {
                     if abs(lastDate.timeIntervalSinceNow) > 86400 {
-                        print(true)
+                        //print(true)
                         //86400 { // seconds in 24 hours
                         // Time to change the label
                         let nextIndex = selectQuote(quoteList: quoteList);
@@ -99,7 +101,7 @@ class HomeVC: UIViewController {
                         userDefaults.set(lastRetrieval, forKey: "lastRetrieval")
                         userDefaults.synchronize()
                     }
-                print(false)
+                //print(false)
                     // Do nothing, not enough time has elapsed to change labels
                     self.quoteLabel.text = self.quoteList[index]
                 }

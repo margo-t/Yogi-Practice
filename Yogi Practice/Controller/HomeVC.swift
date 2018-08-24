@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+//import UserNotifications
 
 
 class HomeVC: UIViewController {
@@ -20,18 +21,66 @@ class HomeVC: UIViewController {
     
     var medTime = 0
     var pracTime = 0
+    var quote = ""
+    var scheduled = false
     
    
     @IBOutlet weak var totalTimeLabel: UIButton!
 
+    @IBAction func testB(_ sender: Any) {
+        
+//        //let notification = UNMutableNotificationContent()
+//        notification.title = "Your Daily Quote"
+//        updateQuote(quoteList: getQuoteList());
+//
+//        notification.body = quote
+//        notification.sound = UNNotificationSound.default()
+//
+//        // Configure the trigger for a 7am wakeup.
+//        var dateInfo = DateComponents()
+//        dateInfo.hour = 7
+//        dateInfo.minute = 0
+//
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: true)
+//        //let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+//        let request = UNNotificationRequest(identifier: "notification1", content: notification, trigger: trigger)
+//
+//        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        //initNotificationSetupCheck()
         let userID = Auth.auth().currentUser?.uid
         let ref = Database.database().reference()
+        scheduled = (UserDefaults.standard.value(forKey: "scheduled") as? Bool) ?? false
+        let notificationPref = (UserDefaults.standard.value(forKey: "notifications") as? Bool) ?? false
+        
+        if (notificationPref && !scheduled) {
+        
+//            print("scheduling notification")
+//            UserDefaults.standard.set(true, forKey: "scheduled")
+//            let notification = UNMutableNotificationContent()
+//            notification.title = "Your Daily Quote"
+//            updateQuote(quoteList: getQuoteList());
+//
+//            notification.body = quote
+//            notification.sound = UNNotificationSound.default()
+//
+//            // Configure the trigger for a 7am wakeup.
+//            var dateInfo = DateComponents()
+//            dateInfo.hour = 7
+//            dateInfo.minute = 0
+//
+//            let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: true)
+//            //let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+//            let request = UNNotificationRequest(identifier: "notification1", content: notification, trigger: trigger)
+//
+//            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            
+    }
         
         
         if userID != nil {
@@ -90,8 +139,8 @@ class HomeVC: UIViewController {
                         // Time to change the label
                         let nextIndex = selectQuote(quoteList: quoteList);
                             //index + 1
-                        
-                        self.quoteLabel.text = self.quoteList[nextIndex]
+                        quote = self.quoteList[nextIndex]
+                        self.quoteLabel.text = quote
                         
                         let lastRetrieval : [NSObject : AnyObject] = [
                             "date" as NSObject : NSDate(),
@@ -103,13 +152,15 @@ class HomeVC: UIViewController {
                     }
                 //print(false)
                     // Do nothing, not enough time has elapsed to change labels
+                    quote = self.quoteList[index]
                     self.quoteLabel.text = self.quoteList[index]
                 }
             }
         } else {
             
             // No dictionary found, show first quote
-            self.quoteLabel.text = self.quoteList.first!
+            quote = self.quoteList.first!
+            self.quoteLabel.text = quote
             
             // Make new dictionary and save to NSUserDefaults
             let lastRetrieval : [NSObject : AnyObject] = [
@@ -139,7 +190,7 @@ class HomeVC: UIViewController {
             let nextScene =  segue.destination as! PranayamaVC
             
             // Pass the selected object to the new view controller.
-                let type = "Pranayama Class"
+                let type = "Standard Class"
                 nextScene.selectedType = type
         }
         
@@ -180,11 +231,23 @@ class HomeVC: UIViewController {
             //print("content: \n\(c)")
             quotes = c.components(separatedBy: "\n")
             //print(quotes.count)
-            //print(quotes[quotes.count-1])
+            print(quotes[quotes.count-1])
             quotes.removeLast()
             //print(quotes[quotes.count-1])
         }
         
         return quotes;
     }
+    
+    
+//    func initNotificationSetupCheck() {
+//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert])
+//        { (success, error) in
+//            if success {
+//                print("Permission Granted")
+//            } else {
+//                print("There was a problem!")
+//            }
+//        }
+//    }
 }

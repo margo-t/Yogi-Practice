@@ -23,7 +23,6 @@ class MeditationVC: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var totalTime: UILabel!
     
-    
     @IBOutlet weak var timerSliderOutlet: UISlider!
     @IBOutlet weak var PlayButtonOutlet: UIButton!
     @IBOutlet weak var PauseButtonOutlet: UIButton!
@@ -33,28 +32,41 @@ class MeditationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        UIApplication.shared.isIdleTimerDisabled = true
-        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        //super.viewDidLoad()
+        super.viewDidDisappear(false)
+        
+        self.timer.invalidate()
+        self.CurrentMeditationTime = 0
+        
+        //Update UI
+        self.totalTime.text = String(Int(self.TotalMeditationTime/3600))+" hours, "+String(Int((self.TotalMeditationTime%3600)/60))+" mins"
+        
+        FinishButtonOutlet.isHidden = true
+        PlayButtonOutlet.isHidden = false
+        timerSliderOutlet.isHidden = false
+        counterMinutes = 1800
+        CurrentMeditationTime = 0
+        timerSliderOutlet.setValue(1800, animated: true)
+        timerLabel.text = "30:00"
         
         UIApplication.shared.isIdleTimerDisabled = false
+        print("viewDidDisappear")
+        
     }
     
     func playSound() {
+        
         let systemSoundID: SystemSoundID = 1013
         AudioServicesPlaySystemSound(systemSoundID)
-//        if (meditationSound?.isPlaying)!{
-//            meditationSound?.stop()
-//        }
-//        meditationSound?.play()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("viewWillAppear")
+        
+        UIApplication.shared.isIdleTimerDisabled = true
         
         let userID = Auth.auth().currentUser?.uid
         let ref = Database.database().reference()
@@ -172,16 +184,7 @@ class MeditationVC: UIViewController {
         }
         else {
             return String(time)
-            
         }
-        
     }
-    
-    
-    
-
-    
-
-    
     
 }

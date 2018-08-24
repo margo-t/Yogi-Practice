@@ -35,6 +35,7 @@ class SignUpVC: UIViewController, GIDSignInUIDelegate {
         
         notificationView.isHidden = true
         notificationLabel.isHidden = true
+        var loginErrorMessage = ""
         
         if emailField.text != nil && passwordField.text != nil {
             AuthService.instance.loginUser(withEmail: emailField.text!, andPassword: passwordField.text!, loginComplete: { (success, loginError) in
@@ -48,11 +49,10 @@ class SignUpVC: UIViewController, GIDSignInUIDelegate {
                 else {
                     print(String(describing: loginError?.localizedDescription))
                     
-                    self.notificationView.isHidden = false
-                    self.notificationLabel.isHidden = false
-                    
-                    self.notificationLabel.text = loginError?.localizedDescription
-                    
+                    //self.notificationView.isHidden = false
+                    //self.notificationLabel.isHidden = false
+                    //self.notificationLabel.text = loginError?.localizedDescription
+                    loginErrorMessage = (loginError?.localizedDescription)!
                     
                 }
                 
@@ -71,7 +71,7 @@ class SignUpVC: UIViewController, GIDSignInUIDelegate {
                         self.notificationView.isHidden = false
                         self.notificationLabel.isHidden = false
                         
-                        self.notificationLabel.text = (registrationError?.localizedDescription)!
+                        self.notificationLabel.text = loginErrorMessage //(registrationError?.localizedDescription)!
                     }
                 })
                 

@@ -9,7 +9,10 @@
 import UIKit
 import CoreData
 import Firebase
-import GoogleSignIn;
+//import GoogleSignIn;
+//import FBSDKCoreKit
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -20,38 +23,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-       
+        //FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         FirebaseApp.configure()
-        print("got to a gelegate")
+        print("got to a delegate")
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC")
         
         if Auth.auth().currentUser == nil {
             print("is nil user")
-            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+            
             window?.makeKeyAndVisible()
             window?.rootViewController?.present(loginVC, animated: true, completion: nil)
             
         }
         
-        
-        //TODO: google sign-in set up
-        
-//        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-//        print("REQUEST TOKEN")
-//        print(FirebaseApp.app()?.options.clientID ?? "Client ID expected")
-//        GIDSignIn.sharedInstance().delegate = self
-        
-        
+        else if (UserDefaults.standard.value(forKey: "nickname") as? String) == nil // user default name == nil go to Home vc
+        {
+            let userID = Auth.auth().currentUser?.uid
+            let ref = Database.database().reference()
+            ref.child("users").child(userID!).child("userInfo").observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get time value
+                
+                if snapshot.hasChild("nickname"){
+                    
+                    print("nickname  exist - save to user defaults and go to default screen ")
+                    if (snapshot.value as? NSDictionary) != nil {
+                        
+                        //(UserDefaults.standard.value(forKey: "nickname") = value["nickname"] as? String
+                    }
+                    
+                } else{
+                    
+                    print("nickname doesn't exist, go to on-boarding")
+                    let onboardVC = storyboard.instantiateViewController(withIdentifier: "OnboardingVC")
+                    self.window?.makeKeyAndVisible()
+                    self.window?.rootViewController?.present(onboardVC, animated: true, completion: nil)
+                }
+                })
+        }
         
         return true
     
 }
+
     
     func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any])
         -> Bool {
-            return GIDSignIn.sharedInstance().handle(url,
-                                                     sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
-                                                     annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+
+            let emailSignIn = GIDSignIn.sharedInstance().handle(url,
+                                                                sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                                                annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+//            let facebookSignIn = FBSDKApplicationDelegate.sharedInstance().application(
+//                application,
+//                open: url,
+//                sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?,
+//                annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+            return emailSignIn //|| facebookSignIn
             
     }
 
@@ -64,8 +92,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             return
         }
         
-        print("signed in to FB")
-        
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                        accessToken: authentication.accessToken)
@@ -75,10 +101,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 print(error.localizedDescription)
                 return
             }
-            // User is signed in
-            print("user authenticated")
-            print(user?.uid ?? "user uid")
-            //self.handleLogin()
         }
     }
     

@@ -8,11 +8,10 @@
 
 import UIKit
 import Firebase
-import GoogleSignIn;
+//import FBSDKLoginKit
 
 class LoginVC: UIViewController, GIDSignInUIDelegate {
 
-    @IBOutlet weak var googleSignInButton: GIDSignInButton!
     
     @IBAction func loginEmailButton(_ sender: Any) {
         let signUpVC = storyboard?.instantiateViewController(withIdentifier: "SignUpVC")
@@ -20,6 +19,16 @@ class LoginVC: UIViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func loginFbButton(_ sender: Any) {
+//        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+//        fbLoginManager.logIn(withReadPermissions: ["email"], from: self) { (result, error) -> Void in
+//            if (error == nil){
+//                let fbloginresult : FBSDKLoginManagerLoginResult = result!
+//                if(fbloginresult.grantedPermissions.contains("email"))
+//                {
+//                    print("Successfully signed in user")
+//                }
+//            }
+//        }
     }
     
     
@@ -27,24 +36,63 @@ class LoginVC: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        GIDSignIn.sharedInstance().uiDelegate = self
-//        GIDSignIn.sharedInstance().signIn()
-//        googleSignInButton.style = .wide
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if Auth.auth().currentUser != nil {
-            dismiss(animated: true, completion: nil)
+            
+            
+            
+            if (UserDefaults.standard.value(forKey: "nickname") as? String) != nil {
+                handleLogin()
+            }
+
+            else if (UserDefaults.standard.value(forKey: "nickname") as? String) == nil // user default name == nil go to Home vc
+            {
+                let userID = Auth.auth().currentUser?.uid
+                let ref = Database.database().reference()
+                ref.child("users").child(userID!).child("userInfo").observeSingleEvent(of: .value, with: { (snapshot) in
+                    // Get time value
+                    
+                    if snapshot.hasChild("nickname"){
+                        
+                        print("nickname  exist - save to user defaults and go to default screen ")
+                        if let value = snapshot.value as? NSDictionary {
+                            let nickname = value["username"] as? String ?? ""
+                            UserDefaults.standard.set(nickname, forKey: "nickname")
+                            self.handleLogin()
+                        }
+                        
+                    } else{
+                        
+                        print("nickname doesn't exist, go to on-boarding")
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let onboardVC = storyboard.instantiateViewController(withIdentifier: "OnboardingVC")
+                        self.present(onboardVC, animated: true, completion: nil)
+                    }
+                })
+            }
+                
+/////////////
+                
+            else {
+                print("nickname doesn't exist, go to on-boarding")
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let onboardVC = storyboard.instantiateViewController(withIdentifier: "OnboardingVC")
+                self.present(onboardVC, animated: true, completion: nil)
+                //dismiss(animated: true, completion: nil)
+            }
+            
+            //
         }
     }
 
     func handleLogin() {
         print("handle login")
-          //performSegue(withIdentifier: "login", sender: nil)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let meditationVController: MeditationVC = (storyboard.instantiateViewController(withIdentifier: "MeditationVC") as? MeditationVC)!
-        self.present(meditationVController, animated: true, completion: nil)
+        let homeVController = storyboard.instantiateViewController(withIdentifier: "rootController")
+        self.present(homeVController, animated: true, completion: nil)
 
     }
 

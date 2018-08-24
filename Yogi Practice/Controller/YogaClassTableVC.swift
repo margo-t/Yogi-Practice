@@ -11,13 +11,23 @@ import Foundation
 class YogaClassTableVC: UITableViewController {
     
     var classes = ["Standard Class", "Asana Class", "Pranayama Class"];
+    var classDescription = [
+        TypesDecription(name: "Standard Class", description: "Full Sivananda class consisting of breathing excersizes and asanas"),
+        TypesDecription(name: "Asana Class", description: "Sequence of 12 asanas"),
+        TypesDecription(name: "Pranayama Class", description: "Breathing exersizes")
+    ]
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView(frame: .zero)
+        self.tableView.rowHeight = 110
+
         
     }
     
@@ -31,11 +41,14 @@ class YogaClassTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ClassCell", for: indexPath)
-        cell.textLabel?.text = classes[indexPath.row]
-        //labelTitle.text=classes[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ClassCell", for: indexPath) as! ClassTypeCell
+        let row = indexPath.row
+        
+        cell.titleLabel.text = classDescription[row].name
+        cell.descriptionLabel.text = classDescription[row].description
         
         return cell
+        
     }
     
     
